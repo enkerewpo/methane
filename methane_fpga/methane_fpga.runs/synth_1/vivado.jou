@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Aug  5 11:51:51 2022
+# Process ID: 8652
+# Current directory: C:/Users/wheatfox/Documents/GitHub/methane/methane_fpga/methane_fpga.runs/synth_1
+# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: C:/Users/wheatfox/Documents/GitHub/methane/methane_fpga/methane_fpga.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/Users/wheatfox/Documents/GitHub/methane/methane_fpga/methane_fpga.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
