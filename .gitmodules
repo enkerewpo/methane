@@ -1,0 +1,3 @@
+[submodule "esp32/components/lvgl"]
+	path = esp32/components/lvgl
+	url = https://github.com/lvgl/lvgl.git
