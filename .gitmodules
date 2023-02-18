@@ -1,3 +1,6 @@
 [submodule "esp32/components/lvgl"]
 	path = esp32/components/lvgl
 	url = https://github.com/lvgl/lvgl.git
+[submodule "esp32/components/lvgl_esp32_drivers"]
+	path = esp32/components/lvgl_esp32_drivers
+	url = https://github.com/lvgl/lvgl_esp32_drivers.git
