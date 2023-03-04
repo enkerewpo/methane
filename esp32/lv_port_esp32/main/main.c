@@ -22,7 +22,9 @@
 
 /* Littlevgl specific */
 #ifdef LV_LVGL_H_INCLUDE_SIMPLE
+
 #include "lvgl.h"
+
 #else
 #include "lvgl/lvgl.h"
 #endif
@@ -30,17 +32,19 @@
 #include "lvgl_helpers.h"
 
 #ifndef CONFIG_LV_TFT_DISPLAY_MONOCHROME
-    #if defined CONFIG_LV_USE_DEMO_WIDGETS
-        #include "lv_examples/src/lv_demo_widgets/lv_demo_widgets.h"
-    #elif defined CONFIG_LV_USE_DEMO_KEYPAD_AND_ENCODER
-        #include "lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.h"
-    #elif defined CONFIG_LV_USE_DEMO_BENCHMARK
-        #include "lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.h"
-    #elif defined CONFIG_LV_USE_DEMO_STRESS
-        #include "lv_examples/src/lv_demo_stress/lv_demo_stress.h"
-    #else
-        #error "No demo application selected."
-    #endif
+#if defined CONFIG_LV_USE_DEMO_WIDGETS
+
+#include "lv_examples/src/lv_demo_widgets/lv_demo_widgets.h"
+
+#elif defined CONFIG_LV_USE_DEMO_KEYPAD_AND_ENCODER
+#include "lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.h"
+#elif defined CONFIG_LV_USE_DEMO_BENCHMARK
+#include "lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.h"
+#elif defined CONFIG_LV_USE_DEMO_STRESS
+#include "lv_examples/src/lv_demo_stress/lv_demo_stress.h"
+#else
+#error "No demo application selected."
+#endif
 #endif
 
 /*********************
@@ -53,8 +57,12 @@
  *  STATIC PROTOTYPES
  **********************/
 static void lv_tick_task(void *arg);
+
 static void guiTask(void *pvParameter);
+
 static void create_demo_application(void);
+
+static void show_welcome(void);
 
 /**********************
  *   APPLICATION MAIN
@@ -64,7 +72,7 @@ void app_main() {
     /* If you want to use a task to create the graphic, you NEED to create a Pinned task
      * Otherwise there can be problem such as memory corruption and so on.
      * NOTE: When not using Wi-Fi nor Bluetooth you can pin the guiTask to core 0 */
-    xTaskCreatePinnedToCore(guiTask, "gui", 4096*2, NULL, 0, NULL, 1);
+    xTaskCreatePinnedToCore(guiTask, "gui", 4096 * 2, NULL, 0, NULL, 1);
 }
 
 /* Creates a semaphore to handle concurrent call to lvgl stuff
@@ -82,12 +90,12 @@ static void guiTask(void *pvParameter) {
     /* Initialize SPI or I2C bus used by the drivers */
     lvgl_driver_init();
 
-    lv_color_t* buf1 = heap_caps_malloc(DISP_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_DMA);
+    lv_color_t *buf1 = heap_caps_malloc(DISP_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_DMA);
     assert(buf1 != NULL);
 
     /* Use double buffered when not working with monochrome displays */
 #ifndef CONFIG_LV_TFT_DISPLAY_MONOCHROME
-    lv_color_t* buf2 = heap_caps_malloc(DISP_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_DMA);
+    lv_color_t *buf2 = heap_caps_malloc(DISP_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_DMA);
     assert(buf2 != NULL);
 #else
     static lv_color_t *buf2 = NULL;
@@ -140,15 +148,14 @@ static void guiTask(void *pvParameter) {
 
     /* Create and start a periodic timer interrupt to call lv_tick_inc */
     const esp_timer_create_args_t periodic_timer_args = {
-        .callback = &lv_tick_task,
-        .name = "periodic_gui"
+            .callback = &lv_tick_task,
+            .name = "periodic_gui"
     };
     esp_timer_handle_t periodic_timer;
     ESP_ERROR_CHECK(esp_timer_create(&periodic_timer_args, &periodic_timer));
     ESP_ERROR_CHECK(esp_timer_start_periodic(periodic_timer, LV_TICK_PERIOD_MS * 1000));
 
-    /* Create the demo application */
-    create_demo_application();
+    show_welcome();
 
     while (1) {
         /* Delay 1 tick (assumes FreeRTOS tick is 10ms */
@@ -158,7 +165,7 @@ static void guiTask(void *pvParameter) {
         if (pdTRUE == xSemaphoreTake(xGuiSemaphore, portMAX_DELAY)) {
             lv_task_handler();
             xSemaphoreGive(xGuiSemaphore);
-       }
+        }
     }
 
     /* A task should NEVER return */
@@ -169,8 +176,7 @@ static void guiTask(void *pvParameter) {
     vTaskDelete(NULL);
 }
 
-static void create_demo_application(void)
-{
+static void create_demo_application(void) {
     /* When using a monochrome display we only show "Hello World" centered on the
      * screen */
 #if defined CONFIG_LV_TFT_DISPLAY_MONOCHROME || \
@@ -193,18 +199,49 @@ static void create_demo_application(void)
 #else
     /* Otherwise we show the selected demo */
 
-    #if defined CONFIG_LV_USE_DEMO_WIDGETS
-        lv_demo_widgets();
-    #elif defined CONFIG_LV_USE_DEMO_KEYPAD_AND_ENCODER
-        lv_demo_keypad_encoder();
-    #elif defined CONFIG_LV_USE_DEMO_BENCHMARK
-        lv_demo_benchmark();
-    #elif defined CONFIG_LV_USE_DEMO_STRESS
-        lv_demo_stress();
-    #else
-        #error "No demo application selected."
-    #endif
+#if defined CONFIG_LV_USE_DEMO_WIDGETS
+    lv_demo_widgets();
+#elif defined CONFIG_LV_USE_DEMO_KEYPAD_AND_ENCODER
+    lv_demo_keypad_encoder();
+#elif defined CONFIG_LV_USE_DEMO_BENCHMARK
+    lv_demo_benchmark();
+#elif defined CONFIG_LV_USE_DEMO_STRESS
+    lv_demo_stress();
+#else
+#error "No demo application selected."
 #endif
+#endif
+}
+
+static void show_welcome(void) {
+
+    // 创建屏幕对象
+    lv_obj_t *screen = lv_disp_get_scr_act(NULL);
+
+    static lv_style_t style_screen;
+    lv_style_init(&style_screen);
+    lv_style_set_bg_color(&style_screen, LV_STATE_DEFAULT, LV_COLOR_BLACK);
+    lv_obj_add_style(lv_scr_act(), LV_OBJ_PART_MAIN, &style_screen);
+
+    static lv_style_t style_text;
+    lv_style_init(&style_text);
+    lv_style_set_text_color(&style_text, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+
+    lv_obj_t *label1 = lv_label_create(screen, NULL);
+    lv_label_set_text(label1, "METHANE SYNTH");
+    lv_obj_set_pos(label1, 50, 30);
+    lv_obj_add_style(label1, LV_OBJ_PART_MAIN, &style_text);
+
+    lv_obj_t *label_version = lv_label_create(screen, NULL);
+    lv_label_set_text(label_version, "MODEL V1");
+    lv_obj_set_pos(label_version, 50, 50);
+    lv_obj_add_style(label_version, LV_OBJ_PART_MAIN, &style_text);
+
+    lv_obj_t *label2 = lv_label_create(screen, NULL);
+    lv_label_set_text(label2, "wheatfox");
+    lv_obj_set_pos(label2, 50, 90);
+    lv_obj_add_style(label2, LV_OBJ_PART_MAIN, &style_text);
+
 }
 
 static void lv_tick_task(void *arg) {
