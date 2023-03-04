@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# 
+# Start of session at: Sat Mar  4 23:46:23 2023
+# Process ID: 26488
+# Current directory: D:/GitHub/methane/vitis_p/webtalk
+# Command line: wbtcv.exe -mode batch -source vitis_webtalk.tcl
+# Log file: D:/GitHub/methane/vitis_p/webtalk/webtalk.log
+# Journal file: D:/GitHub/methane/vitis_p/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source vitis_webtalk.tcl

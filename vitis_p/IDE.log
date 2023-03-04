@@ -1,0 +1,311 @@
+23:12:37 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\GitHub\methane\vitis_p\temp_xsdb_launch_script.tcl
+23:12:39 INFO  : XSCT server has started successfully.
+23:12:39 INFO  : Successfully done setting XSCT server connection channel  
+23:12:39 INFO  : plnx-install-location is set to ''
+23:12:39 INFO  : Successfully done setting workspace for the tool. 
+23:12:39 INFO  : Successfully done query RDI_DATADIR 
+23:12:39 INFO  : Registering command handlers for Vitis TCF services
+23:19:52 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\GitHub\methane\vitis_p\temp_xsdb_launch_script.tcl
+23:19:55 INFO  : XSCT server has started successfully.
+23:19:55 INFO  : Successfully done setting XSCT server connection channel  
+23:19:55 INFO  : plnx-install-location is set to ''
+23:19:55 INFO  : Successfully done setting workspace for the tool. 
+23:19:55 INFO  : Successfully done query RDI_DATADIR 
+23:19:56 INFO  : Registering command handlers for Vitis TCF services
+23:20:27 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\GitHub\methane\vitis_p\temp_xsdb_launch_script.tcl
+23:20:30 INFO  : XSCT server has started successfully.
+23:20:31 INFO  : Successfully done setting XSCT server connection channel  
+23:20:31 INFO  : plnx-install-location is set to ''
+23:20:31 INFO  : Successfully done query RDI_DATADIR 
+23:20:31 INFO  : Successfully done setting workspace for the tool. 
+23:20:31 INFO  : Registering command handlers for Vitis TCF services
+23:24:31 INFO  : Successfully done sdx_reload_mss "D:/GitHub/methane/vitis_p/methane_core/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+23:24:31 INFO  : Successfully done sdx_reload_mss "D:/GitHub/methane/vitis_p/methane_core/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+23:27:58 INFO  : Removed 'D:/GitHub/methane/vitis_p/methane_core/export/methane_core' from custom platform repositories.
+23:31:35 INFO  : Checking for BSP changes to sync application flags for project 'methane_core'...
+23:32:11 INFO  : Checking for BSP changes to sync application flags for project 'methane_core'...
+23:32:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:32:35 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+23:32:35 INFO  : 'jtag frequency' command is executed.
+23:32:35 INFO  : Context for 'APU' is selected.
+23:32:35 INFO  : System reset is completed.
+23:32:38 INFO  : 'after 3000' command is executed.
+23:32:38 INFO  : Context for 'APU' is selected.
+23:32:38 INFO  : Hardware design information is loaded from 'D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:32:38 INFO  : 'configparams force-mem-access 1' command is executed.
+23:32:38 INFO  : Context for 'APU' is selected.
+23:32:38 INFO  : Sourcing of 'D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl' is done.
+23:32:38 INFO  : 'ps7_init' command is executed.
+23:32:38 INFO  : 'ps7_post_config' command is executed.
+23:32:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:32:39 INFO  : The application 'D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:32:39 INFO  : 'configparams force-mem-access 0' command is executed.
+23:32:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:32:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:32:39 INFO  : 'con' command is executed.
+23:32:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:32:39 INFO  : Launch script is exported to file 'D:\GitHub\methane\vitis_p\.sdk\launch_scripts\single_application_debug\debugger_methane_core-default.tcl'
+23:32:49 INFO  : Disconnected from the channel tcfchan#2.
+23:32:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:32:50 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+23:32:50 INFO  : 'jtag frequency' command is executed.
+23:32:50 INFO  : Context for 'APU' is selected.
+23:32:50 INFO  : System reset is completed.
+23:32:53 INFO  : 'after 3000' command is executed.
+23:32:53 INFO  : Context for 'APU' is selected.
+23:32:53 INFO  : Hardware design information is loaded from 'D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:32:53 INFO  : 'configparams force-mem-access 1' command is executed.
+23:32:53 INFO  : Context for 'APU' is selected.
+23:32:53 INFO  : Sourcing of 'D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl' is done.
+23:32:53 INFO  : 'ps7_init' command is executed.
+23:32:53 INFO  : 'ps7_post_config' command is executed.
+23:32:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:32:54 INFO  : The application 'D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:32:54 INFO  : 'configparams force-mem-access 0' command is executed.
+23:32:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:32:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:32:54 INFO  : 'con' command is executed.
+23:32:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:32:54 INFO  : Launch script is exported to file 'D:\GitHub\methane\vitis_p\.sdk\launch_scripts\single_application_debug\debugger_methane_core-default.tcl'
+23:33:38 INFO  : Disconnected from the channel tcfchan#3.
+23:33:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:33:39 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+23:33:39 INFO  : 'jtag frequency' command is executed.
+23:33:39 INFO  : Context for 'APU' is selected.
+23:33:39 INFO  : System reset is completed.
+23:33:42 INFO  : 'after 3000' command is executed.
+23:33:42 INFO  : Context for 'APU' is selected.
+23:33:42 INFO  : Hardware design information is loaded from 'D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:33:42 INFO  : 'configparams force-mem-access 1' command is executed.
+23:33:42 INFO  : Context for 'APU' is selected.
+23:33:42 INFO  : Sourcing of 'D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl' is done.
+23:33:43 INFO  : 'ps7_init' command is executed.
+23:33:43 INFO  : 'ps7_post_config' command is executed.
+23:33:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:33:43 INFO  : The application 'D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:33:43 INFO  : 'configparams force-mem-access 0' command is executed.
+23:33:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:33:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:33:43 INFO  : 'con' command is executed.
+23:33:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:33:43 INFO  : Launch script is exported to file 'D:\GitHub\methane\vitis_p\.sdk\launch_scripts\single_application_debug\debugger_methane_core-default.tcl'
+23:36:27 INFO  : Disconnected from the channel tcfchan#4.
+23:36:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:36:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+23:36:46 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+23:36:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:37:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+23:37:09 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+23:38:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:38:22 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+23:38:22 INFO  : 'jtag frequency' command is executed.
+23:38:22 INFO  : Context for 'APU' is selected.
+23:38:22 INFO  : System reset is completed.
+23:38:25 INFO  : 'after 3000' command is executed.
+23:38:25 INFO  : Context for 'APU' is selected.
+23:38:25 INFO  : Hardware design information is loaded from 'D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:38:25 INFO  : 'configparams force-mem-access 1' command is executed.
+23:38:25 INFO  : Context for 'APU' is selected.
+23:38:25 INFO  : Sourcing of 'D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl' is done.
+23:38:26 INFO  : 'ps7_init' command is executed.
+23:38:26 INFO  : 'ps7_post_config' command is executed.
+23:38:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:38:26 INFO  : The application 'D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:38:26 INFO  : 'configparams force-mem-access 0' command is executed.
+23:38:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:38:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:38:26 INFO  : 'con' command is executed.
+23:38:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:38:26 INFO  : Launch script is exported to file 'D:\GitHub\methane\vitis_p\.sdk\launch_scripts\single_application_debug\debugger_methane_core-default.tcl'
+23:39:06 INFO  : Disconnected from the channel tcfchan#5.
+23:39:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:39 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+23:39:39 INFO  : 'jtag frequency' command is executed.
+23:39:39 INFO  : Context for 'APU' is selected.
+23:39:39 INFO  : System reset is completed.
+23:39:42 INFO  : 'after 3000' command is executed.
+23:39:42 INFO  : Context for 'APU' is selected.
+23:39:42 INFO  : Hardware design information is loaded from 'D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:39:42 INFO  : 'configparams force-mem-access 1' command is executed.
+23:39:42 INFO  : Context for 'APU' is selected.
+23:39:42 INFO  : Sourcing of 'D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl' is done.
+23:39:42 INFO  : 'ps7_init' command is executed.
+23:39:42 INFO  : 'ps7_post_config' command is executed.
+23:39:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:43 INFO  : The application 'D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:39:43 INFO  : 'configparams force-mem-access 0' command is executed.
+23:39:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:39:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:43 INFO  : 'con' command is executed.
+23:39:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:39:43 INFO  : Launch script is exported to file 'D:\GitHub\methane\vitis_p\.sdk\launch_scripts\single_application_debug\debugger_methane_core-default.tcl'
+23:39:58 INFO  : Checking for BSP changes to sync application flags for project 'methane_core'...
+23:40:06 INFO  : Disconnected from the channel tcfchan#6.
+23:40:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:40:07 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A08870' is selected.
+23:40:07 INFO  : 'jtag frequency' command is executed.
+23:40:07 INFO  : Context for 'APU' is selected.
+23:40:07 INFO  : System reset is completed.
+23:40:10 INFO  : 'after 3000' command is executed.
+23:40:10 INFO  : Context for 'APU' is selected.
+23:40:10 INFO  : Hardware design information is loaded from 'D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:40:10 INFO  : 'configparams force-mem-access 1' command is executed.
+23:40:10 INFO  : Context for 'APU' is selected.
+23:40:10 INFO  : Sourcing of 'D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl' is done.
+23:40:11 INFO  : 'ps7_init' command is executed.
+23:40:11 INFO  : 'ps7_post_config' command is executed.
+23:40:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:40:11 INFO  : The application 'D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:40:11 INFO  : 'configparams force-mem-access 0' command is executed.
+23:40:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/GitHub/methane/vitis_p/methane_core/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/GitHub/methane/vitis_p/methane_core/Debug/methane_core.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:40:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:40:11 INFO  : 'con' command is executed.
+23:40:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:40:11 INFO  : Launch script is exported to file 'D:\GitHub\methane\vitis_p\.sdk\launch_scripts\single_application_debug\debugger_methane_core-default.tcl'
+23:46:21 INFO  : Disconnected from the channel tcfchan#7.

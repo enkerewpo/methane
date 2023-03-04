@@ -1,0 +1,1074 @@
+TRACE::2023-03-04.23:28:53::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:53::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:53::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:53::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:53::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:53::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:53::SCWPlatform::Do not have an existing db opened. 
+TRACE::2023-03-04.23:28:54::SCWPlatform::Opened new HwDB with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"D:/GitHub/methane/methane_fpga/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2023-03-04.23:28:54::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"D:/GitHub/methane/methane_fpga/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper"
+		}]
+}
+TRACE::2023-03-04.23:28:54::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"D:/GitHub/methane/methane_fpga/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper"
+		}]
+}
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:54::SCWDomain::checking for install qemu data   : 
+TRACE::2023-03-04.23:28:54::SCWDomain:: Using the QEMU Data from install at  : D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2023-03-04.23:28:54::SCWDomain:: Using the QEMU args  from install at  : D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:54::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2023-03-04.23:28:54::SCWMssOS::No sw design opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::mss does not exists at D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::Creating sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::Adding the swdes entry, created swdb D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::updating the scw layer changes to swdes at   D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::Writing mss at D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::Completed writing the mss file at D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2023-03-04.23:28:54::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2023-03-04.23:28:54::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:54::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss||
+
+TRACE::2023-03-04.23:28:54::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:54::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss||
+
+TRACE::2023-03-04.23:28:54::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:54::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss||
+
+TRACE::2023-03-04.23:28:54::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"D:/GitHub/methane/methane_fpga/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:54::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:54::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss||
+
+TRACE::2023-03-04.23:28:54::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:54::SCWMssOS::Completed writing the mss file at D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2023-03-04.23:28:54::SCWMssOS::Forcing BSP Sources regeneration.
+LOG::2023-03-04.23:28:55::SCWPlatform::Started generating the artifacts platform design_1_wrapper
+TRACE::2023-03-04.23:28:55::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-03-04.23:28:55::SCWPlatform::Started generating the artifacts for system configuration design_1_wrapper
+LOG::2023-03-04.23:28:55::SCWSystem::Checking the domain standalone_domain
+LOG::2023-03-04.23:28:55::SCWSystem::Not a boot domain 
+LOG::2023-03-04.23:28:55::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2023-03-04.23:28:55::SCWDomain::Generating domain artifcats
+TRACE::2023-03-04.23:28:55::SCWMssOS::Generating standalone artifcats
+TRACE::2023-03-04.23:28:55::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/qemu/
+TRACE::2023-03-04.23:28:55::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/qemu/
+TRACE::2023-03-04.23:28:55::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss||
+
+KEYINFO::2023-03-04.23:28:55::SCWMssOS::Could not open the swdb for D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+KEYINFO::2023-03-04.23:28:55::SCWMssOS::Could not open the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+ERROR: [Hsi 55-1558] Software Design D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss is not found
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Cleared the swdb table entry
+TRACE::2023-03-04.23:28:55::SCWMssOS::No sw design opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::mss exists loading the mss file  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::Opened the sw design from mss  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::Adding the swdes entry D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2023-03-04.23:28:55::SCWMssOS::updating the scw layer about changes
+TRACE::2023-03-04.23:28:55::SCWMssOS::Opened the sw design.  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::Completed writing the mss file at D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2023-03-04.23:28:55::SCWMssOS::Mss edits present, copying mssfile into export location D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-03-04.23:28:55::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-03-04.23:28:55::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2023-03-04.23:28:55::SCWMssOS::skipping the bsp build ... 
+TRACE::2023-03-04.23:28:55::SCWMssOS::Copying to export directory.
+TRACE::2023-03-04.23:28:55::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-03-04.23:28:55::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2023-03-04.23:28:55::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2023-03-04.23:28:55::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2023-03-04.23:28:55::SCWSystem::Completed Processing the sysconfig design_1_wrapper
+LOG::2023-03-04.23:28:55::SCWPlatform::Completed generating the artifacts for system configuration design_1_wrapper
+TRACE::2023-03-04.23:28:55::SCWPlatform::Started preparing the platform 
+TRACE::2023-03-04.23:28:55::SCWSystem::Writing the bif file for system config design_1_wrapper
+TRACE::2023-03-04.23:28:55::SCWSystem::dir created 
+TRACE::2023-03-04.23:28:55::SCWSystem::Writing the bif 
+TRACE::2023-03-04.23:28:55::SCWPlatform::Started writing the spfm file 
+TRACE::2023-03-04.23:28:55::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-03-04.23:28:55::SCWPlatform::Completed generating the platform
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"D:/GitHub/methane/methane_fpga/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"b1c5fd6808a76e8450e419ee0795617b",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-03-04.23:28:55::SCWPlatform::updated the xpfm file.
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"D:/GitHub/methane/methane_fpga/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"b1c5fd6808a76e8450e419ee0795617b",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"D:/GitHub/methane/methane_fpga/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"b1c5fd6808a76e8450e419ee0795617b",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2023-03-04.23:28:55::SCWPlatform::Started generating the artifacts platform design_1_wrapper
+TRACE::2023-03-04.23:28:55::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-03-04.23:28:55::SCWPlatform::Started generating the artifacts for system configuration design_1_wrapper
+LOG::2023-03-04.23:28:55::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2023-03-04.23:28:55::SCWDomain::Generating domain artifcats
+TRACE::2023-03-04.23:28:55::SCWMssOS::Generating standalone artifcats
+TRACE::2023-03-04.23:28:55::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/qemu/
+TRACE::2023-03-04.23:28:55::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/qemu/
+TRACE::2023-03-04.23:28:55::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::Completed writing the mss file at D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2023-03-04.23:28:55::SCWMssOS::Mss edits present, copying mssfile into export location D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-03-04.23:28:55::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-03-04.23:28:55::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2023-03-04.23:28:55::SCWMssOS::skipping the bsp build ... 
+TRACE::2023-03-04.23:28:55::SCWMssOS::Copying to export directory.
+TRACE::2023-03-04.23:28:55::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-03-04.23:28:55::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2023-03-04.23:28:55::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2023-03-04.23:28:55::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2023-03-04.23:28:55::SCWSystem::Completed Processing the sysconfig design_1_wrapper
+LOG::2023-03-04.23:28:55::SCWPlatform::Completed generating the artifacts for system configuration design_1_wrapper
+TRACE::2023-03-04.23:28:55::SCWPlatform::Started preparing the platform 
+TRACE::2023-03-04.23:28:55::SCWSystem::Writing the bif file for system config design_1_wrapper
+TRACE::2023-03-04.23:28:55::SCWSystem::dir created 
+TRACE::2023-03-04.23:28:55::SCWSystem::Writing the bif 
+TRACE::2023-03-04.23:28:55::SCWPlatform::Started writing the spfm file 
+TRACE::2023-03-04.23:28:55::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-03-04.23:28:55::SCWPlatform::Completed generating the platform
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:28:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:28:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:28:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:28:55::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:28:55::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:28:55::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"D:/GitHub/methane/methane_fpga/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"b1c5fd6808a76e8450e419ee0795617b",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-03-04.23:28:55::SCWPlatform::updated the xpfm file.
+LOG::2023-03-04.23:31:52::SCWPlatform::Started generating the artifacts platform design_1_wrapper
+TRACE::2023-03-04.23:31:52::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-03-04.23:31:52::SCWPlatform::Started generating the artifacts for system configuration design_1_wrapper
+LOG::2023-03-04.23:31:52::SCWSystem::Checking the domain standalone_domain
+LOG::2023-03-04.23:31:52::SCWSystem::Not a boot domain 
+LOG::2023-03-04.23:31:52::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2023-03-04.23:31:52::SCWDomain::Generating domain artifcats
+TRACE::2023-03-04.23:31:52::SCWMssOS::Generating standalone artifcats
+TRACE::2023-03-04.23:31:52::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/qemu/
+TRACE::2023-03-04.23:31:52::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/qemu/
+TRACE::2023-03-04.23:31:52::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-03-04.23:31:52::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:31:52::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:31:52::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:31:52::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:31:52::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:31:52::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:31:52::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:31:52::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:31:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:31:52::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:31:52::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:31:52::SCWMssOS::Completed writing the mss file at D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2023-03-04.23:31:52::SCWMssOS::Mss edits present, copying mssfile into export location D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:31:52::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-03-04.23:31:52::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-03-04.23:31:52::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2023-03-04.23:31:52::SCWMssOS::doing bsp build ... 
+TRACE::2023-03-04.23:31:52::SCWMssOS::System Command Ran  D: & cd  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2023-03-04.23:31:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2023-03-04.23:31:52::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2023-03-04.23:31:52::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2023-03-04.23:31:52::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2023-03-04.23:31:52::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2023-03-04.23:31:52::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2023-03-04.23:31:52::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-03-04.23:31:52::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-03-04.23:31:52::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2023-03-04.23:31:52::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2023-03-04.23:31:52::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-03-04.23:31:52::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-03-04.23:31:52::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2023-03-04.23:31:52::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2023-03-04.23:31:52::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-03-04.23:31:52::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-03-04.23:31:52::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2023-03-04.23:31:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2023-03-04.23:31:52::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2023-03-04.23:31:52::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-03-04.23:31:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-03-04.23:31:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2023-03-04.23:31:53::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2023-03-04.23:31:53::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-03-04.23:31:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-03-04.23:31:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2023-03-04.23:31:53::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2023-03-04.23:31:53::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2023-03-04.23:31:53::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2023-03-04.23:31:53::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2023-03-04.23:31:53::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2023-03-04.23:31:53::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:53::SCWMssOS::"Compiling ddrps"
+
+TRACE::2023-03-04.23:31:54::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2023-03-04.23:31:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-03-04.23:31:54::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-03-04.23:31:54::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:54::SCWMssOS::"Compiling devcfg"
+
+TRACE::2023-03-04.23:31:55::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2023-03-04.23:31:55::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2023-03-04.23:31:55::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2023-03-04.23:31:55::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:55::SCWMssOS::"Compiling dmaps"
+
+TRACE::2023-03-04.23:31:56::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2023-03-04.23:31:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-03-04.23:31:56::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-03-04.23:31:56::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:56::SCWMssOS::"Compiling scugic"
+
+TRACE::2023-03-04.23:31:58::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2023-03-04.23:31:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2023-03-04.23:31:58::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2023-03-04.23:31:58::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:58::SCWMssOS::"Compiling scutimer"
+
+TRACE::2023-03-04.23:31:59::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2023-03-04.23:31:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-03-04.23:31:59::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-03-04.23:31:59::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:31:59::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2023-03-04.23:31:59::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2023-03-04.23:31:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2023-03-04.23:31:59::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2023-03-04.23:31:59::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:32:00::SCWMssOS::"Compiling standalone"
+
+TRACE::2023-03-04.23:32:06::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2023-03-04.23:32:06::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-03-04.23:32:06::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-03-04.23:32:06::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:32:06::SCWMssOS::"Compiling uartps"
+
+TRACE::2023-03-04.23:32:08::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2023-03-04.23:32:08::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2023-03-04.23:32:08::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2023-03-04.23:32:08::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:32:08::SCWMssOS::"Compiling usbps"
+
+TRACE::2023-03-04.23:32:10::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2023-03-04.23:32:10::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-03-04.23:32:10::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-03-04.23:32:10::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-03-04.23:32:10::SCWMssOS::"Compiling xadcps"
+
+TRACE::2023-03-04.23:32:11::SCWMssOS::'Finished building libraries'
+
+TRACE::2023-03-04.23:32:11::SCWMssOS::Copying to export directory.
+TRACE::2023-03-04.23:32:11::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-03-04.23:32:11::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2023-03-04.23:32:11::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2023-03-04.23:32:11::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2023-03-04.23:32:11::SCWSystem::Completed Processing the sysconfig design_1_wrapper
+LOG::2023-03-04.23:32:11::SCWPlatform::Completed generating the artifacts for system configuration design_1_wrapper
+TRACE::2023-03-04.23:32:11::SCWPlatform::Started preparing the platform 
+TRACE::2023-03-04.23:32:11::SCWSystem::Writing the bif file for system config design_1_wrapper
+TRACE::2023-03-04.23:32:11::SCWSystem::dir created 
+TRACE::2023-03-04.23:32:11::SCWSystem::Writing the bif 
+TRACE::2023-03-04.23:32:11::SCWPlatform::Started writing the spfm file 
+TRACE::2023-03-04.23:32:11::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-03-04.23:32:11::SCWPlatform::Completed generating the platform
+TRACE::2023-03-04.23:32:11::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:32:11::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:32:11::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:32:11::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:32:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:32:11::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:32:11::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:32:11::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:32:11::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:32:11::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:32:11::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:32:11::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:32:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:32:11::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:32:11::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:32:11::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:32:11::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:32:11::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:32:11::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:32:11::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:32:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:32:11::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:32:11::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:32:11::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:32:11::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"D:/GitHub/methane/methane_fpga/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"true",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"b1c5fd6808a76e8450e419ee0795617b",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-03-04.23:32:11::SCWPlatform::updated the xpfm file.
+TRACE::2023-03-04.23:32:11::SCWPlatform::Trying to open the hw design at D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA given D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA absoulate path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform::DSA directory D:/GitHub/methane/vitis_p/design_1_wrapper/hw
+TRACE::2023-03-04.23:32:11::SCWPlatform:: Platform Path D:/GitHub/methane/vitis_p/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2023-03-04.23:32:11::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-03-04.23:32:11::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2023-03-04.23:32:11::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2023-03-04.23:32:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-03-04.23:32:11::SCWMssOS::Checking the sw design at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2023-03-04.23:32:11::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2023-03-04.23:32:11::SCWMssOS::Sw design exists and opened at  D:/GitHub/methane/vitis_p/design_1_wrapper/ps7_cortexa9_0/standalone_domain/bsp/system.mss

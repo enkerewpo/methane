@@ -1,0 +1,24 @@
+Nothing to build in platform 'design_1_wrapper'
+
+23:39:58 **** Incremental Build of configuration Debug for project methane_core ****
+make all 
+D:/Xilinx/Vitis/2019.2/gnuwin/bin/make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+D:/Xilinx/Vitis/2019.2/gnuwin/bin/make --no-print-directory main-build
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: methane_core.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/GitHub/methane/vitis_p/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_domain/bsplib/lib -o "methane_core.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: methane_core.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size methane_core.elf  |tee "methane_core.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19072	   1144	  22568	  42784	   a720	methane_core.elf
+Finished building: methane_core.elf.size
+ 
