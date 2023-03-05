@@ -1,9 +1,4 @@
-package Oscillator
-
 import chisel3._
-import chisel3.util._
-import chisel3.experimental.FixedPoint
-
 
 /**
  * Oscillator module
@@ -11,12 +6,11 @@ import chisel3.experimental.FixedPoint
  * @author wheatfox
  * @version 20230305
  */
-class Oscillator()
-    extends Module {
+class Oscillator() extends Module {
 
     val io = IO(new Bundle {
         val en = Input(Bool()) // enable
-        val freq = Input(UInt(16.W)) // note input frequency
+        val freq = Input(UInt(32.W)) // note input frequency
         val out = Output(SInt(16.W)) // output 16bit sample point (signed)
     })
 
@@ -30,12 +24,12 @@ class Oscillator()
     // now test with a simple sine waveform
 
     val samplePoint = Wire(SInt(16.W))
-    val holdTick = RegInit(78125.U(32.W) / (io.freq * 2.U(32.W)))
+    val holdTick = RegInit(3906250.U(32.W)/ io.freq)
     val runTick = RegInit(0.U(32.W))
     val idx = RegInit(0.U(16.W))
 
     when(io.en) {
-        holdTick := 78125.U(32.W) / (io.freq * 2.U(32.W))
+        holdTick := 3906250.U(32.W)/ io.freq
         runTick := runTick + 1.U(32.W)
         when(runTick === holdTick) {
             runTick := 0.U(32.W)

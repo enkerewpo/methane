@@ -17,7 +17,7 @@ module Top(
         .clock(clk_10M),
         .reset(rst),
         .io_en(1),
-        .io_freq(16'd440), // A440
+        .io_freq(32'd44000), // A440
         .io_out(out)
     );
 
