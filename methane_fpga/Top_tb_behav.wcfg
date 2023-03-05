@@ -12,37 +12,29 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="265000001fs"></ZoomEndTime>
-      <Cursor1Time time="191000000fs"></Cursor1Time>
+      <ZoomEndTime time="6645000001fs"></ZoomEndTime>
+      <Cursor1Time time="1628705000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="223"></NameColumnWidth>
+      <NameColumnWidth column_width="219"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="5" />
    <wvobject fp_name="/Top_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/osc1/clock" type="logic">
-      <obj_property name="ElementShortName">clock</obj_property>
-      <obj_property name="ObjectShortName">clock</obj_property>
+   <wvobject fp_name="/Top_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/osc1/reset" type="logic">
-      <obj_property name="ElementShortName">reset</obj_property>
-      <obj_property name="ObjectShortName">reset</obj_property>
+   <wvobject fp_name="/Top_tb/methane_top/cw0/clk_out1" type="logic">
+      <obj_property name="ElementShortName">clk_out1</obj_property>
+      <obj_property name="ObjectShortName">clk_out1</obj_property>
    </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/osc1/clock" type="logic">
-      <obj_property name="ElementShortName">clock</obj_property>
-      <obj_property name="ObjectShortName">clock</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/osc1/reset" type="logic">
-      <obj_property name="ElementShortName">reset</obj_property>
-      <obj_property name="ObjectShortName">reset</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/osc1/testReg" type="array">
-      <obj_property name="ElementShortName">testReg[15:0]</obj_property>
-      <obj_property name="ObjectShortName">testReg[15:0]</obj_property>
+   <wvobject fp_name="/Top_tb/methane_top/osc1/idx" type="array">
+      <obj_property name="ElementShortName">idx[15:0]</obj_property>
+      <obj_property name="ObjectShortName">idx[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Top_tb/out" type="array">
       <obj_property name="ElementShortName">out[15:0]</obj_property>
