@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1659671623">
+  <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
   <File Type="ROUTE-PWR" Name="design_1_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
-  <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
+  <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="design_1_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
-  <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="design_1_wrapper_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="design_1_wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="design_1_wrapper_pwropt.dcp"/>
@@ -24,10 +24,12 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="design_1_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="design_1_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="design_1_wrapper_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="design_1_wrapper.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="design_1_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MMI" Name="design_1_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="design_1_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="design_1_wrapper.sysdef"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="design_1_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="design_1_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="design_1_wrapper_route_status.rpt"/>
@@ -35,6 +37,7 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="design_1_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="design_1_wrapper_timing_summary_routed.rpx"/>
+  <File Type="RDI-RDI" Name="design_1_wrapper.vdi"/>
   <File Type="ROUTE-CLK" Name="design_1_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="design_1_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_routed.pb"/>
@@ -46,16 +49,13 @@
   <File Type="BITSTR-NKY" Name="design_1_wrapper.nky"/>
   <File Type="PDI-FILE" Name="design_1_wrapper.pdi"/>
   <File Type="RCFI_FILE" Name="design_1_wrapper.rcfi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="CFI_FILE" Name="design_1_wrapper.cfi"/>
   <File Type="RNPI_FILE" Name="design_1_wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="design_1_wrapper.npi"/>
   <File Type="RBD_FILE" Name="design_1_wrapper.rbd"/>
-  <File Type="BITSTR-LTX" Name="design_1_wrapper.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="design_1_wrapper.sysdef"/>
   <File Type="BG-BGN" Name="design_1_wrapper.bgn"/>
   <File Type="BG-DRC" Name="design_1_wrapper.drc"/>
-  <File Type="RDI-RDI" Name="design_1_wrapper.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
