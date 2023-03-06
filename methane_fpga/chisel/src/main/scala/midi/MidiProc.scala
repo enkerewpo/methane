@@ -1,5 +1,6 @@
-import chisel3._
+package midi
 
+import chisel3._
 
 /**
  * MIDI processing module
@@ -9,7 +10,6 @@ import chisel3._
  */
 
 class MidiProc extends Module {
-
 
 
 }

@@ -1,3 +1,5 @@
+package methane
+
 import chisel3._
 
 /**
@@ -18,18 +20,18 @@ class Oscillator() extends Module {
         Seq.tabulate(256)(
             i => (
                 scala.math.sin(2 * scala.math.Pi * i / 256)
-                * 20000).toInt.S(16.W)
+                    * 20000).toInt.S(16.W)
         )
     )
-    // now test with a simple sine waveform
 
+    // now test with a simple sine waveform
     val samplePoint = Wire(SInt(16.W))
-    val holdTick = RegInit(3906250.U(32.W)/ io.freq)
+    val holdTick = RegInit(3906250.U(32.W) / io.freq)
     val runTick = RegInit(0.U(32.W))
     val idx = RegInit(0.U(16.W))
 
     when(io.en) {
-        holdTick := 3906250.U(32.W)/ io.freq
+        holdTick := 3906250.U(32.W) / io.freq
         runTick := runTick + 1.U(32.W)
         when(runTick === holdTick) {
             runTick := 0.U(32.W)
@@ -48,10 +50,3 @@ object OscillatorGen extends App {
         Array("--target-dir", "output/")
     )
 }
-
-/**
- * 10M -> 100ns
- * freq -> 1/freq
- * idx -> (1/freq)/256/100, one idx remain tick count
- *          78125/(freq * 2)
- */
