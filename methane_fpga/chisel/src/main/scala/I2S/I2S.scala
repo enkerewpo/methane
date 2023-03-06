@@ -12,38 +12,38 @@ class I2S extends Module {
         val serialData = Output(Bool())
     })
 
-    val bitCounter = RegInit(0.U(4.W))
-
-    // Interleave the data from the left and right channels
-    val interleavedData = Cat(io.rightChannel, io.leftChannel)
-
-    // The bit clock signal of the I2S protocol is a periodic signal that alternates between high and low
-    val bitClock = RegInit(false.B)
-    when(bitCounter === 7.U) {
-        bitClock := ~bitClock
-        bitCounter := 0.U
+    val nclk = RegInit(false.B) // 44.1k * 16 * 2 = 1.4112M clock
+    val nclk_cnt = RegInit(10.U)
+    when(nclk_cnt === 0.U) {
+        nclk := ~nclk
+        nclk_cnt := 10.U
     }.otherwise {
-        bitCounter := bitCounter + 1.U
+        nclk_cnt := nclk_cnt - 1.U
     }
 
-    // The word select signal of the I2S protocol is a periodic signal that goes high to indicate the start of a new word
-    val wordSelect = RegInit(false.B)
-    when(bitCounter === 0.U) {
-        wordSelect := ~wordSelect
+    val clk = nclk.asClock
+
+    io.bitClock := clk
+
+    val leftReg = RegInit(0.U(16.W))
+    val rightReg = RegInit(0.U(16.W))
+    val wordSelectReg = RegInit(true.B)
+
+    withClock(clk) {
+
+        val bitCounter = RegInit(0.U)
+
+        when(bitCounter === 0.U) {
+            bitCounter := 7.U
+            wordSelectReg := !wordSelectReg
+            leftReg := io.leftChannel
+            rightReg := io.rightChannel
+        }.otherwise {
+            bitCounter := bitCounter - 1.U
+        }
+
     }
 
-    // The serial data signal of the I2S protocol is a rising edge triggered signal that carries the data
-    val serialData = RegInit(false.B)
-    when(bitCounter === 0.U) {
-        serialData := false.B
-    }.elsewhen(bitCounter === 15.U) {
-        serialData := true.B
-    }
-
-    // Send the data and signals to the output ports
-    io.bitClock := bitClock
-    io.wordSelect := wordSelect
-    io.serialData := Mux(serialData, interleavedData(0), !interleavedData(15.U-bitCounter))
 }
 
 object I2SGen extends App {

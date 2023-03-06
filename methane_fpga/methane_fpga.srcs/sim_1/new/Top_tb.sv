@@ -16,8 +16,7 @@ module Top_tb();
 
     Top methane_top(
         .clk_in_50M(clk),
-        .rst(rst),
-        .out(out)
+        .rst(rst)
     );
 
 endmodule

@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=D:/apps/Xilinx/Vitis/2019.2/bin;D:/apps/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/nt64;D:/apps/Xilinx/Vivado/2019.2/ids_lite/ISE/lib/nt64:D:/apps/Xilinx/Vivado/2019.2/bin
+  PATH=D:/Xilinx/Vitis/2019.2/bin;D:/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2019.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2019.2/bin
 else
-  PATH=D:/apps/Xilinx/Vitis/2019.2/bin;D:/apps/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/nt64;D:/apps/Xilinx/Vivado/2019.2/ids_lite/ISE/lib/nt64:D:/apps/Xilinx/Vivado/2019.2/bin:$PATH
+  PATH=D:/Xilinx/Vitis/2019.2/bin;D:/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2019.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2019.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/wheatfox/Documents/GitHub/methane/methane_fpga/methane_fpga.runs/synth_1'
+HD_PWD='D:/GitHub/methane/methane_fpga/methane_fpga.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+EAStep vivado -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl

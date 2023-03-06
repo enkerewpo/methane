@@ -1,4 +1,4 @@
-module methane.Oscillator(
+module Oscillator(
   input         clock,
   input         reset,
   input         io_en,
