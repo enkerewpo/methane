@@ -1,2 +1,5 @@
 *.html linguist-detectable=false
 *.xml linguist-detectable=false
+*.c linguist-detectable=false
+*.h linguist-detectable=false
+*.tcl linguist-detectable=false
