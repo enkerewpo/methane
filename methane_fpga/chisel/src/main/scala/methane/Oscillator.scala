@@ -44,9 +44,3 @@ class Oscillator() extends Module {
     samplePoint := waveform(idx)
     io.out := samplePoint
 }
-
-object OscillatorGen extends App {
-    (new chisel3.stage.ChiselStage).emitVerilog(new Oscillator,
-        Array("--target-dir", "output/")
-    )
-}
