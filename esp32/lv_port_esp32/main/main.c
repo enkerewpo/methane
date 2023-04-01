@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -215,7 +216,6 @@ static void create_demo_application(void) {
 
 static void show_welcome(void) {
 
-    // 创建屏幕对象
     lv_obj_t *screen = lv_disp_get_scr_act(NULL);
 
     static lv_style_t style_screen;
@@ -226,6 +226,11 @@ static void show_welcome(void) {
     static lv_style_t style_text;
     lv_style_init(&style_text);
     lv_style_set_text_color(&style_text, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+
+    static lv_style_t style_circle;
+    lv_style_init(&style_circle);
+    lv_style_set_border_color(&style_circle, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+    lv_style_set_bg_opa(&style_circle, LV_STATE_DEFAULT, LV_OPA_TRANSP);
 
     lv_obj_t *label1 = lv_label_create(screen, NULL);
     lv_label_set_text(label1, "METHANE SYNTH");
@@ -242,6 +247,79 @@ static void show_welcome(void) {
     lv_obj_set_pos(label2, 50, 90);
     lv_obj_add_style(label2, LV_OBJ_PART_MAIN, &style_text);
 
+    lv_obj_t *circle1 = lv_obj_create(screen, NULL);
+    lv_obj_set_size(circle1, 50, 50);
+    lv_obj_set_pos(circle1, 200, 120);
+    lv_obj_set_style_local_bg_color(circle1, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_TRANSP);
+    lv_obj_set_style_local_radius(circle1, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
+    lv_obj_add_style(circle1, LV_OBJ_PART_MAIN, &style_circle);
+
+    lv_obj_t *circle2 = lv_obj_create(screen, circle1);
+    lv_obj_set_size(circle2, 50, 50);
+    lv_obj_set_pos(circle2, 220, 120);
+    lv_obj_set_style_local_bg_color(circle2, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_TRANSP);
+    lv_obj_set_style_local_radius(circle2, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
+    lv_obj_add_style(circle2, LV_OBJ_PART_MAIN, &style_circle);
+
+    lv_obj_t *canvas = lv_canvas_create(screen, NULL);
+    lv_obj_set_size(canvas, 135, 20);
+    lv_obj_set_pos(canvas, 50, 140);
+    lv_canvas_set_buffer(canvas, lv_mem_alloc(135 * 20 * 2), 135, 20, LV_IMG_CF_TRUE_COLOR);
+    lv_canvas_fill_bg(canvas, LV_COLOR_BLACK, LV_OPA_COVER);
+
+    lv_coord_t x, y;
+
+    for (x = 0; x < 30; x++) {
+        y = 10 + (int) (10 * sin(x * 2 * M_PI / 30));
+        lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
+    }
+
+    for (x = 35; x < 65; x++) {
+        lv_coord_t x1 = x - 35;
+        if (x1 == 0) {
+            for (y = 10; y < 20; y++) {
+                lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
+            }
+        } else if (x1 < 15 && x1 > 0) {
+            y = 19;
+            lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
+        } else if (x1 == 15) {
+            for (y = 19; y >= 0; y--) {
+                lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
+            }
+        } else if (x1 > 15 && x1 < 29) {
+            y = 0;
+            lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
+        } else if (x1 == 29) {
+            for (y = 0; y < 10; y++) {
+                lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
+            }
+        }
+    }
+
+    for (x = 70; x < 100; x++) {
+        lv_coord_t x1 = x - 70;
+        if (x1 < 7) {
+            y = x1 + 10;
+        } else if (x1 < 21) {
+            y = 14 - x1 + 10;
+        } else {
+            y = -28 + x1 + 10;
+        }
+        lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
+    }
+
+    for (x = 105; x < 135; x++) {
+        lv_coord_t x1 = x - 105;
+        if (x1 == 0) {
+            for (y = 0; y < 20; y++) {
+                lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
+            }
+        } else if (x1 <= 29) {
+            y = 10 + (10 - (20. / 30) * x1);
+            lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
+        }
+    }
 }
 
 static void lv_tick_task(void *arg) {
