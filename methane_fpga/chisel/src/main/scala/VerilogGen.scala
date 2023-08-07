@@ -1,15 +1,22 @@
 import methane.Oscillator
 import midi.MidiProc
-import uart.UART_tx
+import uart.{UART_rx, UART_tx}
 
 object VerilogGen extends App {
-    (new chisel3.stage.ChiselStage).emitVerilog(new Oscillator,
-        Array("--target-dir", "output/", "--full-stacktrace"),
-    )
-    (new chisel3.stage.ChiselStage).emitVerilog(new MidiProc,
-        Array("--target-dir", "output/", "--full-stacktrace"),
-    )
-    (new chisel3.stage.ChiselStage).emitVerilog(new UART_tx,
-        Array("--target-dir", "output/", "--full-stacktrace"),
-    )
+  circt.stage.ChiselStage.emitSystemVerilogFile(new Oscillator,
+    Array("--target-dir", "output"),
+    Array("--strip-debug-info"),
+  )
+  circt.stage.ChiselStage.emitSystemVerilogFile(new MidiProc,
+    Array("--target-dir", "output"),
+    Array("--strip-debug-info"),
+  )
+  circt.stage.ChiselStage.emitSystemVerilogFile(new UART_tx,
+    Array("--target-dir", "output"),
+    Array("--strip-debug-info"),
+  )
+  circt.stage.ChiselStage.emitSystemVerilogFile(new UART_rx,
+    Array("--target-dir", "output"),
+    Array("--strip-debug-info"),
+  )
 }
