@@ -11,6 +11,15 @@
   `define RANDOM $random
 `endif // not def RANDOM
 
+// Users can define 'PRINTF_COND' to add an extra gate to prints.
+`ifndef PRINTF_COND_
+  `ifdef PRINTF_COND
+    `define PRINTF_COND_ (`PRINTF_COND)
+  `else  // PRINTF_COND
+    `define PRINTF_COND_ 1
+  `endif // PRINTF_COND
+`endif // not def PRINTF_COND_
+
 // Users can define INIT_RANDOM as general code that gets injected into the
 // initializer block for modules with registers.
 `ifndef INIT_RANDOM
@@ -207,7 +216,9 @@ module MidiProc(
                 reset,
                 io_en,
                 io_midi_in,
-  output [31:0] io_freq
+  output [31:0] io_freq,
+  output        io_note_on,
+                io_note_off
 );
 
   wire               _uart_r_io_o_rx_done;
@@ -345,40 +356,77 @@ module MidiProc(
   reg  [1:0]         state;
   reg  [3:0]         sbyte;
   reg  [6:0]         note;
+  reg  [6:0]         velocity;
+  reg                note_on;
+  reg                note_off;
+  `ifndef SYNTHESIS
+    always @(posedge clock) begin
+      if ((`PRINTF_COND_) & note_on & ~reset)
+        $fwrite(32'h80000002, "NOTE_ON: %d\n", note);
+      if ((`PRINTF_COND_) & note_off & ~reset)
+        $fwrite(32'h80000002, "NOTE_OFF: %d\n", note);
+    end // always @(posedge)
+  `endif // not def SYNTHESIS
   always @(posedge clock) begin
     if (reset) begin
       byte_r <= 8'h0;
       state <= 2'h0;
       sbyte <= 4'h0;
       note <= 7'h0;
+      velocity <= 7'h0;
+      note_on <= 1'h0;
+      note_off <= 1'h0;
     end
     else begin
       automatic logic _GEN_0;
       automatic logic _GEN_1;
       automatic logic _GEN_2;
       automatic logic _GEN_3;
+      automatic logic _GEN_4;
+      automatic logic _GEN_5;
+      automatic logic _GEN_6;
+      automatic logic _GEN_7;
+      automatic logic _GEN_8;
       _GEN_0 = state == 2'h0;
       _GEN_1 = state == 2'h1;
-      _GEN_2 = _uart_r_io_o_rx_done & sbyte == 4'h9;
-      _GEN_3 = state == 2'h2;
-      if ((_GEN_0 | _GEN_1 | _GEN_3) & _uart_r_io_o_rx_done)
+      _GEN_2 = sbyte == 4'h9;
+      _GEN_3 = sbyte == 4'h8;
+      _GEN_4 = _GEN_2 | _GEN_3;
+      _GEN_5 = state == 2'h2;
+      _GEN_6 = _GEN_5 & _uart_r_io_o_rx_done;
+      _GEN_7 = velocity == 7'h0;
+      _GEN_8 = _GEN_0 | _GEN_1;
+      if ((_GEN_0 | _GEN_1 | _GEN_5) & _uart_r_io_o_rx_done)
         byte_r <= _uart_r_io_o_data;
       if (_GEN_0) begin
         if (_uart_r_io_o_rx_done)
           state <= 2'h1;
       end
-      else if (_GEN_1) begin
-        if (_GEN_2)
-          state <= 2'h2;
+      else begin
+        automatic logic _GEN_9;
+        _GEN_9 = _uart_r_io_o_rx_done & (_GEN_2 | _GEN_3);
+        if (_GEN_1) begin
+          if (_GEN_9)
+            state <= 2'h2;
+        end
+        else if (_GEN_5 & _GEN_9)
+          state <= 2'h0;
       end
-      else if (_GEN_3 & _GEN_2)
-        state <= 2'h0;
       if (_GEN_0 & _uart_r_io_o_rx_done)
         sbyte <= byte_r[3:0];
-      if (_GEN_0 | ~(_GEN_1 & _GEN_2)) begin
+      if (_GEN_0 | ~(_GEN_1 & _uart_r_io_o_rx_done & _GEN_4)) begin
       end
       else
         note <= byte_r[6:0];
+      if (_GEN_8 | ~(_GEN_6 & _GEN_4)) begin
+      end
+      else
+        velocity <= byte_r[6:0];
+      note_on <=
+        ~note_on & (~_GEN_8 & _GEN_5 & _uart_r_io_o_rx_done & _GEN_2 & ~_GEN_7 | note_on);
+      note_off <=
+        ~note_off
+        & (_GEN_8 | ~_GEN_6 ? note_off : _GEN_2 ? _GEN_7 | note_off : _GEN_3 | note_off);
     end
   end // always @(posedge)
   `ifdef ENABLE_INITIAL_REG_
@@ -396,6 +444,9 @@ module MidiProc(
         state = _RANDOM[/*Zero width*/ 1'b0][9:8];
         sbyte = _RANDOM[/*Zero width*/ 1'b0][13:10];
         note = _RANDOM[/*Zero width*/ 1'b0][20:14];
+        velocity = _RANDOM[/*Zero width*/ 1'b0][27:21];
+        note_on = _RANDOM[/*Zero width*/ 1'b0][28];
+        note_off = _RANDOM[/*Zero width*/ 1'b0][29];
       `endif // RANDOMIZE_REG_INIT
     end // initial
     `ifdef FIRRTL_AFTER_INITIAL
@@ -410,5 +461,7 @@ module MidiProc(
     .io_o_data        (_uart_r_io_o_data)
   );
   assign io_freq = _GEN[note];
+  assign io_note_on = note_on;
+  assign io_note_off = note_off;
 endmodule
 

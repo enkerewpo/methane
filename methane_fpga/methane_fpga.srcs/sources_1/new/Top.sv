@@ -2,6 +2,9 @@ module Top(
     input           clk_in_50M,
     input           rst,
     input           midi_rxd,
+    input           debug_note_on,
+    input           debug_note_off,
+    output  [15:0]  debug_adsr_cv,
     output          bclk,
     output          ws,
     output          d,
@@ -21,13 +24,28 @@ module Top(
 
     logic [15:0] out1;
     logic [32:0] freq;
+    logic note_on;
+    logic note_off;
 
     MidiProc midi_proc(
         .clock(clk_10M),
         .reset(rst),
         .io_en(1),
         .io_midi_in(midi_rxd),
-        .io_freq(freq)
+        .io_freq(freq),
+        .io_note_on(note_on),
+        .io_note_off(note_off)
+    );
+
+    logic [15:0] adsr_cv;
+
+    ADSR adsr(
+        .clock(clk_10M),
+        .reset(rst),
+        .io_en(1),
+        .io_note_on(debug_note_on),
+        .io_note_off(debug_note_off),
+        .io_out(debug_adsr_cv)
     );
 
     Oscillator osc1(
@@ -38,11 +56,21 @@ module Top(
         .io_out(out1)
     );
 
+    logic [15:0] out_after_vca;
+    VCA vca(
+        .clock(clk_10M),
+        .reset(rst),
+        .io_en(1),
+        .io_in(out1),
+        .io_control(adsr_cv),
+        .io_out(out_after_vca)
+    );
+
     I2S i2s(
         .clk(clk_14M),
         .rst(rst),
-        .L(out1),
-        .R(out1),
+        .L(out_after_vca),
+        .R(out_after_vca),
         .bclk(bclk),
         .ws(ws),
         .d(d)

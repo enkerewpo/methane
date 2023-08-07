@@ -60,26 +60,23 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/GitHub/methane/methane_fpga/methane_fpga.cache/wt [current_project]
-  set_property parent.project_path D:/GitHub/methane/methane_fpga/methane_fpga.xpr [current_project]
-  set_property ip_output_repo D:/GitHub/methane/methane_fpga/methane_fpga.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Github/methane/methane_fpga/methane_fpga.cache/wt [current_project]
+  set_property parent.project_path D:/Github/methane/methane_fpga/methane_fpga.xpr [current_project]
+  set_property ip_output_repo D:/Github/methane/methane_fpga/methane_fpga.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet D:/GitHub/methane/methane_fpga/methane_fpga.runs/synth_1/Top.dcp
-  read_ip -quiet D:/GitHub/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_xdc D:/GitHub/methane/methane_fpga/methane_fpga.srcs/constrs_1/new/m_cstr1.xdc
+  add_files -quiet D:/Github/methane/methane_fpga/methane_fpga.runs/synth_1/Top.dcp
+  read_ip -quiet D:/Github/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_xdc D:/Github/methane/methane_fpga/methane_fpga.srcs/constrs_1/new/m_cstr1.xdc
   link_design -top Top -part xc7z010clg400-1
   close_msg_db -file init_design.pb
 } RESULT]

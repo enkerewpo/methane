@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/GitHub/methane/methane_fpga/methane_fpga.runs/impl_1'
+HD_PWD='D:/Github/methane/methane_fpga/methane_fpga.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

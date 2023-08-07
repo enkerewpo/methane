@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1189019142fs"></ZoomStartTime>
-      <ZoomEndTime time="1394219143fs"></ZoomEndTime>
-      <Cursor1Time time="1228819142fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="714905010fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="215"></NameColumnWidth>
+      <NameColumnWidth column_width="207"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="4" />
    <wvobject fp_name="/Top_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -32,69 +32,21 @@
       <obj_property name="ElementShortName">clk_out1</obj_property>
       <obj_property name="ObjectShortName">clk_out1</obj_property>
    </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/osc1/idx" type="array">
-      <obj_property name="ElementShortName">idx[15:0]</obj_property>
-      <obj_property name="ObjectShortName">idx[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/L" type="array">
-      <obj_property name="ElementShortName">L[15:0]</obj_property>
-      <obj_property name="ObjectShortName">L[15:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/R" type="array">
-      <obj_property name="ElementShortName">R[15:0]</obj_property>
-      <obj_property name="ObjectShortName">R[15:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/bclk" type="logic">
-      <obj_property name="ElementShortName">bclk</obj_property>
-      <obj_property name="ObjectShortName">bclk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/ws" type="logic">
-      <obj_property name="ElementShortName">ws</obj_property>
-      <obj_property name="ObjectShortName">ws</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/d" type="logic">
-      <obj_property name="ElementShortName">d</obj_property>
-      <obj_property name="ObjectShortName">d</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/cnt1" type="array">
-      <obj_property name="ElementShortName">cnt1[3:0]</obj_property>
-      <obj_property name="ObjectShortName">cnt1[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/bclk_r" type="logic">
-      <obj_property name="ElementShortName">bclk_r</obj_property>
-      <obj_property name="ObjectShortName">bclk_r</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/ws_r" type="logic">
-      <obj_property name="ElementShortName">ws_r</obj_property>
-      <obj_property name="ObjectShortName">ws_r</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/d_r" type="logic">
-      <obj_property name="ElementShortName">d_r</obj_property>
-      <obj_property name="ObjectShortName">d_r</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/bit_cnt" type="array">
-      <obj_property name="ElementShortName">bit_cnt[4:0]</obj_property>
-      <obj_property name="ObjectShortName">bit_cnt[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/L_r" type="array">
-      <obj_property name="ElementShortName">L_r[15:0]</obj_property>
-      <obj_property name="ObjectShortName">L_r[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Top_tb/methane_top/i2s/R_r" type="array">
-      <obj_property name="ElementShortName">R_r[15:0]</obj_property>
-      <obj_property name="ObjectShortName">R_r[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="group20" type="group">
+      <obj_property name="label">ADSR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Top_tb/note_on" type="logic">
+         <obj_property name="ElementShortName">note_on</obj_property>
+         <obj_property name="ObjectShortName">note_on</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Top_tb/note_off" type="logic">
+         <obj_property name="ElementShortName">note_off</obj_property>
+         <obj_property name="ObjectShortName">note_off</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Top_tb/adsr_cv" type="array">
+         <obj_property name="ElementShortName">adsr_cv[15:0]</obj_property>
+         <obj_property name="ObjectShortName">adsr_cv[15:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

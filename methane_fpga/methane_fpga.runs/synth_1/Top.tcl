@@ -17,32 +17,32 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/GitHub/methane/methane_fpga/methane_fpga.cache/wt [current_project]
-set_property parent.project_path D:/GitHub/methane/methane_fpga/methane_fpga.xpr [current_project]
+set_property webtalk.parent_dir D:/Github/methane/methane_fpga/methane_fpga.cache/wt [current_project]
+set_property parent.project_path D:/Github/methane/methane_fpga/methane_fpga.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/GitHub/methane/methane_fpga/methane_fpga.cache/ip [current_project]
+set_property ip_output_repo d:/Github/methane/methane_fpga/methane_fpga.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  D:/GitHub/methane/methane_fpga/methane_fpga.srcs/sources_1/new/I2S.sv
-  D:/GitHub/methane/methane_fpga/methane_fpga.srcs/sources_1/new/Top.sv
+  D:/Github/methane/methane_fpga/chisel/output/ADSR.sv
+  D:/Github/methane/methane_fpga/methane_fpga.srcs/sources_1/new/I2S.sv
+  D:/Github/methane/methane_fpga/chisel/output/MidiProc.sv
+  D:/Github/methane/methane_fpga/chisel/output/Oscillator.sv
+  D:/Github/methane/methane_fpga/chisel/output/UART_tx.sv
+  D:/Github/methane/methane_fpga/chisel/output/VCA.sv
+  D:/Github/methane/methane_fpga/methane_fpga.srcs/sources_1/new/Top.sv
 }
-read_verilog -library xil_defaultlib D:/GitHub/methane/methane_fpga/chisel/output/Oscillator.v
-read_ip -quiet D:/GitHub/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all d:/GitHub/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet D:/Github/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all d:/Github/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Github/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Github/methane/methane_fpga/methane_fpga.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -52,8 +52,8 @@ set_property used_in_implementation false [get_files -all d:/GitHub/methane/meth
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/GitHub/methane/methane_fpga/methane_fpga.srcs/constrs_1/new/m_cstr1.xdc
-set_property used_in_implementation false [get_files D:/GitHub/methane/methane_fpga/methane_fpga.srcs/constrs_1/new/m_cstr1.xdc]
+read_xdc D:/Github/methane/methane_fpga/methane_fpga.srcs/constrs_1/new/m_cstr1.xdc
+set_property used_in_implementation false [get_files D:/Github/methane/methane_fpga/methane_fpga.srcs/constrs_1/new/m_cstr1.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
