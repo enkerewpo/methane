@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../methane.ip_user_files/ipstatic" \
+"../../../../methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" \
+
+sv xil_defaultlib  --include "../../../../methane.ip_user_files/ipstatic" \
+"../../../../../src/chisel/output/ADSR.sv" \
+"../../../../../src/I2S.sv" \
+"../../../../../src/chisel/output/MidiProc.sv" \
+"../../../../../src/chisel/output/Oscillator.sv" \
+"../../../../../src/Top.sv" \
+"../../../../../src/chisel/output/UART_tx.sv" \
+"../../../../../src/chisel/output/VCA.sv" \
+"../../../../../src/sim/Top_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

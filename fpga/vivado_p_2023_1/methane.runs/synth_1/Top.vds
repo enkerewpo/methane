@@ -1,0 +1,348 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Aug  8 11:16:52 2023
+# Process ID: 33624
+# Current directory: D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1
+# Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file: D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1/Top.vds
+# Journal file: D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1\vivado.jou
+# Running On: DEDSEC3, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 17040 MB
+#-----------------------------------------------------------
+source Top.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 434.875 ; gain = 162.027
+Command: read_checkpoint -auto_incremental -incremental D:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 25996
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1264.176 ; gain = 410.914
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [D:/Github/methane/fpga/src/Top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1/.Xil/Vivado-33624-DEDSEC3/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1/.Xil/Vivado-33624-DEDSEC3/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MidiProc' [D:/Github/methane/fpga/src/chisel/output/MidiProc.sv:214]
+INFO: [Synth 8-6157] synthesizing module 'UART_rx' [D:/Github/methane/fpga/src/chisel/output/MidiProc.sv:62]
+INFO: [Synth 8-6155] done synthesizing module 'UART_rx' (0#1) [D:/Github/methane/fpga/src/chisel/output/MidiProc.sv:62]
+INFO: [Synth 8-6155] done synthesizing module 'MidiProc' (0#1) [D:/Github/methane/fpga/src/chisel/output/MidiProc.sv:214]
+WARNING: [Synth 8-689] width (33) of port connection 'io_freq' does not match port width (32) of module 'MidiProc' [D:/Github/methane/fpga/src/Top.sv:33]
+INFO: [Synth 8-6157] synthesizing module 'ADSR' [D:/Github/methane/fpga/src/chisel/output/ADSR.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'ADSR' (0#1) [D:/Github/methane/fpga/src/chisel/output/ADSR.sv:53]
+WARNING: [Synth 8-7071] port 'io_attack' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:40]
+WARNING: [Synth 8-7071] port 'io_decay' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:40]
+WARNING: [Synth 8-7071] port 'io_sustain' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:40]
+WARNING: [Synth 8-7071] port 'io_release' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:40]
+WARNING: [Synth 8-7023] instance 'adsr' of module 'ADSR' has 10 connections declared, but only 6 given [D:/Github/methane/fpga/src/Top.sv:40]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator' [D:/Github/methane/fpga/src/chisel/output/Oscillator.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator' (0#1) [D:/Github/methane/fpga/src/chisel/output/Oscillator.sv:53]
+WARNING: [Synth 8-689] width (33) of port connection 'io_freq' does not match port width (32) of module 'Oscillator' [D:/Github/methane/fpga/src/Top.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'VCA' [D:/Github/methane/fpga/src/chisel/output/VCA.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'VCA' (0#1) [D:/Github/methane/fpga/src/chisel/output/VCA.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'I2S' [D:/Github/methane/fpga/src/I2S.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'I2S' (0#1) [D:/Github/methane/fpga/src/I2S.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'UART_tx' [D:/Github/methane/fpga/src/chisel/output/UART_tx.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'UART_tx' (0#1) [D:/Github/methane/fpga/src/chisel/output/UART_tx.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [D:/Github/methane/fpga/src/Top.sv:1]
+WARNING: [Synth 8-7129] Port clock in module VCA is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module VCA is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_en in module ADSR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_en in module MidiProc is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1361.387 ; gain = 508.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1361.387 ; gain = 508.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1361.387 ; gain = 508.125
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1361.387 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'cw0'
+Finished Parsing XDC File [d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'cw0'
+Parsing XDC File [D:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/constrs_1/new/constr_1.xdc]
+Finished Parsing XDC File [D:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/constrs_1/new/constr_1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/constrs_1/new/constr_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1447.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1447.910 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in_50M. (constraint file  d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in_50M. (constraint file  d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for cw0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ADSR'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                              000 |                              000
+                  iSTATE |                              001 |                              001
+                 iSTATE0 |                              010 |                              010
+                 iSTATE1 |                              011 |                              011
+*
+                 iSTATE3 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ADSR'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 3     
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
++---Registers : 
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 9     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 19    
++---ROMs : 
+	                    ROMs := 2     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 5     
+	   3 Input   16 Bit        Muxes := 1     
+	   8 Input   16 Bit        Muxes := 1     
+	   4 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   5 Input    3 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 21    
+	   4 Input    1 Bit        Muxes := 3     
+	   8 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP vca/io_out0, operation Mode is: A*B.
+DSP Report: operator vca/io_out0 is absorbed into DSP vca/io_out0.
+WARNING: [Synth 8-7129] Port io_en in module ADSR is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+--------------------+---------------+----------------+
+|Module Name | RTL Object         | Depth x Width | Implemented As | 
++------------+--------------------+---------------+----------------+
+|Top         | midi_proc/note_reg | 128x21        | Block RAM      | 
+|Top         | osc1/idx_reg_rep   | 256x16        | Block RAM      | 
++------------+--------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|VCA         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance midi_proc/note_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance midi_proc/note_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance osc1/idx_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|VCA         | A*B'        | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |clk_wiz  |     1|
+|2     |CARRY4   |   386|
+|3     |DSP48E1  |     1|
+|4     |LUT1     |   251|
+|5     |LUT2     |    88|
+|6     |LUT3     |   457|
+|7     |LUT4     |    16|
+|8     |LUT5     |    13|
+|9     |LUT6     |    67|
+|10    |MUXF7    |     2|
+|11    |MUXF8    |     1|
+|12    |RAMB18E1 |     2|
+|14    |FDCE     |    28|
+|15    |FDRE     |   199|
+|16    |IBUF     |     2|
+|17    |OBUF     |     4|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1447.910 ; gain = 594.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 1447.910 ; gain = 508.125
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1447.910 ; gain = 594.648
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1447.910 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 392 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1448.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8b213446
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 1448.586 ; gain = 975.383
+INFO: [Common 17-1381] The checkpoint 'D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1/Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  8 11:17:36 2023...

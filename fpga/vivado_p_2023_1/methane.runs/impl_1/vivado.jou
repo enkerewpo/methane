@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Aug  8 11:17:45 2023
+# Process ID: 2392
+# Current directory: D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/impl_1
+# Command line: vivado.exe -log Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Top.tcl -notrace
+# Log file: D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/impl_1/Top.vdi
+# Journal file: D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/impl_1\vivado.jou
+# Running On: DEDSEC3, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 17040 MB
+#-----------------------------------------------------------
+source Top.tcl -notrace

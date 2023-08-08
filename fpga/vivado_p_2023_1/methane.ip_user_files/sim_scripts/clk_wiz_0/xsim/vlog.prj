@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../../methane.gen/sources_1/ip/clk_wiz_0" \
+"../../../../methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

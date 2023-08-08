@@ -1,0 +1,4 @@
+xpm_cdc.sv,systemverilog,xpm,../../../2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../methane.gen/sources_1/ip/clk_wiz_0"
+xpm_VCOMP.vhd,vhdl,xpm,../../../2023.1/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../methane.gen/sources_1/ip/clk_wiz_0"
+clk_wiz_0_sim_netlist.v,verilog,xil_defaultlib,../../../../methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v,incdir="../../../../methane.gen/sources_1/ip/clk_wiz_0"
+glbl.v,Verilog,xil_defaultlib,glbl.v

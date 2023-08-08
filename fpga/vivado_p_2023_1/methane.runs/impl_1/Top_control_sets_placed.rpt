@@ -1,0 +1,92 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Tue Aug  8 11:18:18 2023
+| Host         : DEDSEC3 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    14 |
+|    Minimum number of control sets                        |    14 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    29 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    14 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              25 |           25 |
+| No           | No                    | Yes                    |              11 |            4 |
+| No           | Yes                   | No                     |             104 |           61 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              17 |            5 |
+| Yes          | Yes                   | No                     |              70 |           22 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |            Enable Signal           |             Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|  i2s/CLK           | i2s/ws_r                           | rst_IBUF                                |                1 |              1 |         1.00 |
+|  cw0/inst/clk_out1 | midi_proc/uart_r/sel               | midi_proc/uart_r/bitCnterReg[3]_i_1_n_0 |                1 |              4 |         4.00 |
+|  cw0/inst/clk_out1 | midi_proc/uart_r/state_reg[1]_0[0] | rst_IBUF                                |                2 |              4 |         2.00 |
+|  cw0/inst/clk_out2 |                                    | rst_IBUF                                |                1 |              5 |         5.00 |
+|  i2s/CLK           |                                    | rst_IBUF                                |                3 |              6 |         2.00 |
+|  cw0/inst/clk_out1 | midi_proc/uart_r/E[0]              | rst_IBUF                                |                3 |              7 |         2.33 |
+|  cw0/inst/clk_out1 | midi_proc/uart_r/state_reg[0][0]   | rst_IBUF                                |                2 |              7 |         3.50 |
+|  cw0/inst/clk_out1 | osc1/run_tick0_carry__1_n_1        | rst_IBUF                                |                5 |             16 |         3.20 |
+|  cw0/inst/clk_out1 | adsr/E[0]                          | adsr/SR[0]                              |                4 |             16 |         4.00 |
+|  cw0/inst/clk_out1 | adsr/_GEN_4                        | rst_IBUF                                |                5 |             16 |         3.20 |
+|  i2s/CLK           | i2s/R_r                            | rst_IBUF                                |                4 |             16 |         4.00 |
+|  cw0/inst/clk_out1 |                                    |                                         |               25 |             25 |         1.00 |
+|  cw0/inst/clk_out1 |                                    | osc1/run_tick[0]_i_1_n_0                |                8 |             32 |         4.00 |
+|  cw0/inst/clk_out1 |                                    | rst_IBUF                                |               53 |             72 |         1.36 |
++--------------------+------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+
+

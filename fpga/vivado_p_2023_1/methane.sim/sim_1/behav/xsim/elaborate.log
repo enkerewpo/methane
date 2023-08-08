@@ -1,0 +1,16 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:31]
+WARNING: [VRFC 10-3091] actual bit length 33 differs from formal bit length 32 for port 'io_freq' [D:/Github/methane/fpga/src/Top.sv:33]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:52]
+WARNING: [VRFC 10-3091] actual bit length 33 differs from formal bit length 32 for port 'io_freq' [D:/Github/methane/fpga/src/Top.sv:53]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:61]
+WARNING: [VRFC 10-5021] port 'midi_rxd' is not connected on this instance [D:/Github/methane/fpga/src/sim/Top_tb.sv:17]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
