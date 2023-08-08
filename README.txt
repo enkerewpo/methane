@@ -5,11 +5,10 @@
  \ \_\ \ \_\  \ \_____\    \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\\"\_\  \ \_____\ 
   \/_/  \/_/   \/_____/     \/_/   \/_/\/_/   \/_/\/_/   \/_/ \/_/   \/_____/ 
                                                                               
-a polyphonic analog synthesizer built on zynq/fpga
+a polyphonic analog synthesizer built on FPGA
 
 [specs]
-1. vivado project version - 2019.2
-2. vitis project version - 2019.2
+1. vivado project version - 2023.1
 3. fpga device - Zynq-7000 SoC Z-7010(XC7Z010) with Artix-7 FPGA
 4. fpga zynq soc - ARM Cortex-A9
 5. esp32 pico kit v4.1 for controlling LCD display (SPI, st7789 driver)
