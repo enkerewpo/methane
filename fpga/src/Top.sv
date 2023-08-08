@@ -2,9 +2,6 @@ module Top(
     input           clk_in_50M,
     input           rst,
     input           midi_rxd,
-    input           debug_note_on,
-    input           debug_note_off,
-    output  [15:0]  debug_adsr_cv,
     output          bclk,
     output          ws,
     output          d,
@@ -14,6 +11,7 @@ module Top(
     logic clk_10M;
     logic clk_14M; // 14.1
 
+    // Xilinx IP for clock generation
     clk_wiz_0 cw0(
         .clk_in1(clk_in_50M),
         .reset(rst),
@@ -43,9 +41,9 @@ module Top(
         .clock(clk_10M),
         .reset(rst),
         .io_en(1),
-        .io_note_on(debug_note_on),
-        .io_note_off(debug_note_off),
-        .io_out(debug_adsr_cv)
+        .io_note_on(note_on),
+        .io_note_off(note_off),
+        .io_out(adsr_cv)
     );
 
     Oscillator osc1(

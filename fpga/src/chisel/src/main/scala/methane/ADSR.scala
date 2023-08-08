@@ -2,7 +2,6 @@ package methane
 
 import chisel3._
 import chisel3.util._
-import midi.MidiProc
 
 /**
  * ADSR module triggered by MIDI note on/off, and send signals to VCA

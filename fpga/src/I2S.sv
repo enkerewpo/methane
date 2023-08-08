@@ -1,11 +1,11 @@
 module I2S(
-    input clk,
-    input rst,
-    input [15:0] L,
-    input [15:0] R,
-    output bclk,
-    output ws,
-    output d
+    input           clk,
+    input           rst,
+    input   [15:0]  L,
+    input   [15:0]  R,
+    output          bclk,
+    output          ws,
+    output          d
 );
 
     logic [3:0] cnt1;
