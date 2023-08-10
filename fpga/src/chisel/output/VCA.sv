@@ -4,10 +4,10 @@ module VCA(
                 reset,
                 io_en,
   input  [15:0] io_in,
-                io_control,
+  input  [31:0] io_control,
   output [15:0] io_out
 );
 
-  assign io_out = io_en ? io_in * io_control : 16'h0;
+  assign io_out = io_en ? io_in * io_control[15:0] : 16'h0;
 endmodule
 

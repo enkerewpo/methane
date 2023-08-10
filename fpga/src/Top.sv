@@ -35,7 +35,7 @@ module Top(
         .io_note_off(note_off)
     );
 
-    logic [15:0] adsr_cv;
+    logic [31:0] adsr_cv;
 
     ADSR adsr(
         .clock(clk_10M),

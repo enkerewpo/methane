@@ -70,10 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 4
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -99,7 +95,7 @@ read_verilog -library xil_defaultlib -sv {
   D:/Github/methane/fpga/src/chisel/output/VCA.sv
   D:/Github/methane/fpga/src/Top.sv
 }
-read_ip -quiet d:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet D:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]

@@ -14,7 +14,7 @@ class VCA extends Module {
     new Bundle {
       val en = Input(Bool()) // enable
       val in = Input(SInt(16.W))
-      val control = Input(SInt(16.W)) // control voltage
+      val control = Input(SInt(32.W)) // control voltage
       val out = Output(SInt(16.W)) // output 16bit sample point (signed)
     }
   )

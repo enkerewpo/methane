@@ -56,93 +56,130 @@ module ADSR(
                 io_en,
                 io_note_on,
                 io_note_off,
-  input  [15:0] io_attack,
+  input  [31:0] io_attack,
                 io_decay,
                 io_sustain,
                 io_release,
-  output [15:0] io_out
+  input  [2:0]  io_attack_curve_type,
+                io_decay_curve_type,
+                io_release_curve_type,
+  output [31:0] io_out
 );
 
   reg [2:0]  state;
-  reg [15:0] counter;
-  reg [15:0] out;
-  reg [15:0] attack_slope;
-  reg [15:0] decay_slope;
-  reg [15:0] release_slope;
+  reg [31:0] counter;
+  reg [31:0] out;
+  reg [31:0] attack_k;
+  reg [31:0] decay_k;
+  reg [31:0] release_k;
+  reg [31:0] attack_a;
+  reg [31:0] decay_a;
+  reg [31:0] release_a;
   always @(posedge clock) begin
     if (reset) begin
       state <= 3'h0;
-      counter <= 16'h0;
-      out <= 16'h0;
-      attack_slope <= 16'h0;
-      decay_slope <= 16'h0;
-      release_slope <= 16'h0;
+      counter <= 32'h0;
+      out <= 32'h0;
+      attack_k <= 32'h0;
+      decay_k <= 32'h0;
+      release_k <= 32'h0;
+      attack_a <= 32'h0;
+      decay_a <= 32'h0;
+      release_a <= 32'h0;
     end
     else begin
-      automatic logic             _GEN;
-      automatic logic             _GEN_0;
-      automatic logic             _GEN_1;
+      automatic logic [31:0]      _decay_a_T = 32'hFFFFFFFF - io_sustain;
+      automatic logic [63:0]      _GEN = {32'h0, io_attack};
+      automatic logic [63:0]      _GEN_0 = {32'h0, io_decay};
+      automatic logic [63:0]      _GEN_1 = {32'h0, io_release};
       automatic logic             _GEN_2;
       automatic logic             _GEN_3;
-      automatic logic [7:0][15:0] _GEN_4;
-      _GEN = counter == io_attack;
-      _GEN_0 = io_note_off | _GEN;
-      _GEN_1 = counter == io_decay;
-      _GEN_2 = io_note_off | _GEN_1;
-      _GEN_3 = counter == io_release;
+      automatic logic             _GEN_4;
+      automatic logic             _GEN_5;
+      automatic logic [31:0]      _out_T_9;
+      automatic logic             _GEN_6;
+      automatic logic [31:0]      _out_T_24;
+      automatic logic [7:0][31:0] _GEN_7;
+      automatic logic [7:0][31:0] _GEN_8;
+      automatic logic [63:0]      _attack_a_T_1 = 64'hFFFFFFFF / (_GEN * _GEN);
+      automatic logic [63:0]      _decay_a_T_3 = {32'h0, _decay_a_T} / (_GEN_0 * _GEN_0);
+      automatic logic [63:0]      _release_a_T_1 =
+        {32'h0, io_sustain} / (_GEN_1 * _GEN_1);
+      _GEN_2 = counter == io_attack;
+      _GEN_3 = io_note_off | _GEN_2;
+      _GEN_4 = counter == io_decay;
+      _GEN_5 = io_note_off | _GEN_4;
+      _out_T_9 = io_decay - counter;
+      _GEN_6 = counter == io_release;
+      _out_T_24 = io_release - counter;
       if (state == 3'h0) begin
-        if (io_note_on) begin
+        if (io_note_on)
           state <= 3'h1;
-          out <= 16'h0;
-        end
       end
       else if (state == 3'h1) begin
         if (io_note_off)
           state <= 3'h4;
-        else if (_GEN)
+        else if (_GEN_2)
           state <= 3'h2;
-        if (~_GEN_0)
-          out <= out + attack_slope;
       end
       else if (state == 3'h2) begin
         if (io_note_off)
           state <= 3'h4;
-        else if (_GEN_1)
+        else if (_GEN_4)
           state <= 3'h3;
-        if (~_GEN_2)
-          out <= out - decay_slope;
       end
-      else begin
-        automatic logic _GEN_5;
-        automatic logic _GEN_6;
-        _GEN_5 = state == 3'h3;
-        _GEN_6 = state == 3'h4;
-        if (_GEN_5) begin
-          if (io_note_off)
-            state <= 3'h4;
-        end
-        else if (_GEN_6 & _GEN_3)
-          state <= 3'h0;
-        if (_GEN_5 | ~_GEN_6) begin
-        end
-        else if (_GEN_3)
-          out <= 16'h0;
-        else
-          out <= out - release_slope;
+      else if (state == 3'h3) begin
+        if (io_note_off)
+          state <= 3'h4;
       end
-      _GEN_4 =
+      else if (state == 3'h4 & _GEN_6)
+        state <= 3'h0;
+      _GEN_7 =
         {{counter},
          {counter},
          {counter},
-         {_GEN_3 ? 16'h0 : counter + 16'h1},
-         {io_note_off ? 16'h0 : counter},
-         {_GEN_2 ? 16'h0 : counter + 16'h1},
-         {_GEN_0 ? 16'h0 : counter + 16'h1},
-         {io_note_on ? 16'h0 : counter}};
-      counter <= _GEN_4[state];
-      attack_slope <= 16'hFDE8 / io_attack;
-      decay_slope <= (16'hFDE8 - io_sustain) / io_decay;
-      release_slope <= io_sustain / io_release;
+         {_GEN_6 ? 32'h0 : counter + 32'h1},
+         {io_note_off ? 32'h0 : counter},
+         {_GEN_5 ? 32'h0 : counter + 32'h1},
+         {_GEN_3 ? 32'h0 : counter + 32'h1},
+         {io_note_on ? 32'h0 : counter}};
+      counter <= _GEN_7[state];
+      _GEN_8 =
+        {{out},
+         {out},
+         {out},
+         {_GEN_6
+            ? 32'h0
+            : io_release_curve_type == 3'h0
+                ? io_sustain - release_k * counter
+                : io_release_curve_type == 3'h1
+                    ? release_a * _out_T_24 * _out_T_24
+                    : io_release_curve_type == 3'h2
+                        ? io_sustain - release_a * counter * counter
+                        : out},
+         {io_sustain},
+         {_GEN_5
+            ? out
+            : io_decay_curve_type == 3'h0
+                ? 32'hFFFFFFFF - decay_k * counter
+                : io_decay_curve_type == 3'h1
+                    ? io_sustain + decay_a * _out_T_9 * _out_T_9
+                    : io_decay_curve_type == 3'h2
+                        ? 32'hFFFFFFFF - decay_a * counter * counter
+                        : out},
+         {_GEN_3
+            ? out
+            : io_attack_curve_type == 3'h0
+                ? attack_k * counter
+                : io_attack_curve_type == 3'h1 ? attack_a * counter * counter : out},
+         {io_note_on ? 32'h0 : out}};
+      out <= _GEN_8[state];
+      attack_k <= 32'hFFFFFFFF / io_attack;
+      decay_k <= _decay_a_T / io_decay;
+      release_k <= io_sustain / io_release;
+      attack_a <= _attack_a_T_1[31:0];
+      decay_a <= _decay_a_T_3[31:0];
+      release_a <= _release_a_T_1[31:0];
     end
   end // always @(posedge)
   `ifdef ENABLE_INITIAL_REG_
@@ -150,20 +187,23 @@ module ADSR(
       `FIRRTL_BEFORE_INITIAL
     `endif // FIRRTL_BEFORE_INITIAL
     initial begin
-      automatic logic [31:0] _RANDOM[0:2];
+      automatic logic [31:0] _RANDOM[0:8];
       `ifdef INIT_RANDOM_PROLOG_
         `INIT_RANDOM_PROLOG_
       `endif // INIT_RANDOM_PROLOG_
       `ifdef RANDOMIZE_REG_INIT
-        for (logic [1:0] i = 2'h0; i < 2'h3; i += 2'h1) begin
+        for (logic [3:0] i = 4'h0; i < 4'h9; i += 4'h1) begin
           _RANDOM[i] = `RANDOM;
         end
-        state = _RANDOM[2'h0][2:0];
-        counter = _RANDOM[2'h0][18:3];
-        out = {_RANDOM[2'h0][31:19], _RANDOM[2'h1][2:0]};
-        attack_slope = _RANDOM[2'h1][18:3];
-        decay_slope = {_RANDOM[2'h1][31:19], _RANDOM[2'h2][2:0]};
-        release_slope = _RANDOM[2'h2][18:3];
+        state = _RANDOM[4'h0][2:0];
+        counter = {_RANDOM[4'h0][31:3], _RANDOM[4'h1][2:0]};
+        out = {_RANDOM[4'h1][31:3], _RANDOM[4'h2][2:0]};
+        attack_k = {_RANDOM[4'h2][31:3], _RANDOM[4'h3][2:0]};
+        decay_k = {_RANDOM[4'h3][31:3], _RANDOM[4'h4][2:0]};
+        release_k = {_RANDOM[4'h4][31:3], _RANDOM[4'h5][2:0]};
+        attack_a = {_RANDOM[4'h5][31:3], _RANDOM[4'h6][2:0]};
+        decay_a = {_RANDOM[4'h6][31:3], _RANDOM[4'h7][2:0]};
+        release_a = {_RANDOM[4'h7][31:3], _RANDOM[4'h8][2:0]};
       `endif // RANDOMIZE_REG_INIT
     end // initial
     `ifdef FIRRTL_AFTER_INITIAL

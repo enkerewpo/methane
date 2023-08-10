@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Tue Aug  8 11:18:37 2023
+| Date             : Thu Aug 10 09:53:42 2023
 | Host             : DEDSEC3 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.188        |
+| Total On-Chip Power (W)  | 0.206        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.095        |
+| Dynamic (W)              | 0.114        |
 | Device Static (W)        | 0.093        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 82.8         |
-| Junction Temperature (C) | 27.2         |
+| Max Ambient (C)          | 82.6         |
+| Junction Temperature (C) | 27.4         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -61,11 +61,11 @@ Table of Contents
 |   F7/F8 Muxes  |     0.000 |        3 |     17600 |            0.02 |
 | Signals        |    <0.001 |     1173 |       --- |             --- |
 | Block RAM      |    <0.001 |        1 |        60 |            1.67 |
-| MMCM           |     0.094 |        1 |         2 |           50.00 |
+| MMCM           |     0.113 |        1 |         2 |           50.00 |
 | DSPs           |    <0.001 |        1 |        80 |            1.25 |
 | I/O            |    <0.001 |        7 |       100 |            7.00 |
 | Static Power   |     0.093 |          |           |                 |
-| Total          |     0.188 |          |           |                 |
+| Total          |     0.206 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.058 |       0.052 |      0.005 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.068 |       0.063 |      0.005 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
@@ -154,9 +154,9 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| Top      |     0.095 |
-|   cw0    |     0.095 |
-|     inst |     0.095 |
+| Top      |     0.114 |
+|   cw0    |     0.113 |
+|     inst |     0.113 |
 +----------+-----------+
 
 

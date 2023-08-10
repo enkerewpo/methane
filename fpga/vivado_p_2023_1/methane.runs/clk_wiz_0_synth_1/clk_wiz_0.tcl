@@ -88,7 +88,7 @@ set_property ip_output_repo d:/Github/methane/fpga/vivado_p_2023_1/methane.cache
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet D:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
