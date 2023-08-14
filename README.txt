@@ -9,11 +9,11 @@ a polyphonic analog synthesizer built on FPGA
 
 [specs]
 1. vivado project version - 2023.1
-3. fpga device - Zynq-7000 SoC Z-7010(XC7Z010) with Artix-7 FPGA
-4. fpga zynq soc - ARM Cortex-A9
-5. esp32 pico kit v4.1 for controlling LCD display (SPI, st7789 driver)
-6. stereo module UDA1334A (I2S)
-7. esp32 dev environment - CLion, ESP-IDF 4.4
-8. PCB tools - KiCad 7.0, FreeCAD 0.20
+2. fpga device - Zynq-7000 SoC Z-7010(XC7Z010) with Artix-7 FPGA
+3. fpga zynq soc - ARM Cortex-A9
+4. esp32 pico kit v4.1 for controlling LCD display (SPI, st7789 driver)
+5. stereo module UDA1334A (I2S)
+6. esp32 dev environment - CLion, ESP-IDF 4.4
+7. PCB tools - KiCad 7.0, FreeCAD 0.20
 
 wheatfox 2022 - 2023
