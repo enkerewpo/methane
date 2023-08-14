@@ -4,3 +4,5 @@
 *.h linguist-detectable=false
 *.tcl linguist-detectable=false
 *.vhd linguist-detectable=false
+*.vhdl linguist-detectable=false
+*.vho linguist-detectable=false
