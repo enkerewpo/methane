@@ -3,3 +3,4 @@
 *.c linguist-detectable=false
 *.h linguist-detectable=false
 *.tcl linguist-detectable=false
+*.vhd linguist-detectable=false
