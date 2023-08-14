@@ -24,8 +24,8 @@ class ADSR extends Module {
       val release = Input(UInt(32.W))
       /** curve type selecttion */
       // 0: linear
-      // 1: exponential
-      // 2: logarithmic
+      // 1: parabolic convex
+      // 2: parabolic concave
       val attack_curve_type = Input(UInt(3.W))
       val decay_curve_type = Input(UInt(3.W))
       val release_curve_type = Input(UInt(3.W))
