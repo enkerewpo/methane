@@ -6,3 +6,4 @@
 *.vhd linguist-detectable=false
 *.vhdl linguist-detectable=false
 *.vho linguist-detectable=false
+*.v linguist-language=systemverilog
