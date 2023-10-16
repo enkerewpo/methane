@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Thu Aug 10 09:53:22 2023
+| Date         : Mon Oct 16 19:58:03 2023
 | Host         : DEDSEC3 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    14 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    29 |
+| Unused register locations in slices containing registers |    36 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -41,13 +41,13 @@ Table of Contents
 +--------------------+-------+
 | Total control sets |    14 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     3 |
+| >= 4 to < 6        |     4 |
 | >= 6 to < 8        |     3 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     7 |
+| >= 16              |     6 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              25 |           25 |
-| No           | No                    | Yes                    |              11 |            4 |
-| No           | Yes                   | No                     |             104 |           61 |
+| No           | No                    | No                     |              25 |           24 |
+| No           | No                    | Yes                    |              12 |            4 |
+| No           | Yes                   | No                     |              68 |           23 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              17 |            5 |
-| Yes          | Yes                   | No                     |              70 |           22 |
+| Yes          | No                    | Yes                    |               1 |            1 |
+| Yes          | Yes                   | No                     |              90 |           33 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,20 +73,20 @@ Table of Contents
 +--------------------+------------------------------------+-----------------------------------------+------------------+----------------+--------------+
 |    Clock Signal    |            Enable Signal           |             Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------+------------------------------------+-----------------------------------------+------------------+----------------+--------------+
-|  i2s/CLK           | i2s/ws_r                           | rst_IBUF                                |                1 |              1 |         1.00 |
+|  i2s/bclk_OBUF     | i2s/ws_r                           | rst_IBUF                                |                1 |              1 |         1.00 |
 |  cw0/inst/clk_out1 | midi_proc/uart_r/sel               | midi_proc/uart_r/bitCnterReg[3]_i_1_n_0 |                1 |              4 |         4.00 |
 |  cw0/inst/clk_out1 | midi_proc/uart_r/state_reg[1]_0[0] | rst_IBUF                                |                2 |              4 |         2.00 |
+|  cw0/inst/clk_out1 | uart_tx/bitCnterReg[3]_i_2__0_n_0  | uart_tx/bitCnterReg[3]_i_1__0_n_0       |                1 |              4 |         4.00 |
 |  cw0/inst/clk_out2 |                                    | rst_IBUF                                |                1 |              5 |         5.00 |
-|  i2s/CLK           |                                    | rst_IBUF                                |                3 |              6 |         2.00 |
-|  cw0/inst/clk_out1 | midi_proc/uart_r/E[0]              | rst_IBUF                                |                3 |              7 |         2.33 |
-|  cw0/inst/clk_out1 | midi_proc/uart_r/state_reg[0][0]   | rst_IBUF                                |                2 |              7 |         3.50 |
+|  i2s/bclk_OBUF     |                                    | rst_IBUF                                |                3 |              7 |         2.33 |
+|  cw0/inst/clk_out1 | midi_proc/uart_r/E[0]              | rst_IBUF                                |                4 |              7 |         1.75 |
+|  cw0/inst/clk_out1 | midi_proc/uart_r/state_reg[0][0]   | rst_IBUF                                |                4 |              7 |         1.75 |
+|  cw0/inst/clk_out1 | adsr/_GEN_8                        | rst_IBUF                                |                5 |             16 |         3.20 |
 |  cw0/inst/clk_out1 | osc1/run_tick0_carry__1_n_1        | rst_IBUF                                |                5 |             16 |         3.20 |
-|  cw0/inst/clk_out1 | adsr/E[0]                          | adsr/SR[0]                              |                4 |             16 |         4.00 |
-|  cw0/inst/clk_out1 | adsr/_GEN_4                        | rst_IBUF                                |                5 |             16 |         3.20 |
-|  i2s/CLK           | i2s/R_r                            | rst_IBUF                                |                4 |             16 |         4.00 |
-|  cw0/inst/clk_out1 |                                    |                                         |               25 |             25 |         1.00 |
-|  cw0/inst/clk_out1 |                                    | osc1/run_tick[0]_i_1_n_0                |                8 |             32 |         4.00 |
-|  cw0/inst/clk_out1 |                                    | rst_IBUF                                |               53 |             72 |         1.36 |
+|  cw0/inst/clk_out1 |                                    |                                         |               24 |             25 |         1.04 |
+|  cw0/inst/clk_out1 |                                    | osc1/idx_reg_rep_i_1_n_0                |                8 |             32 |         4.00 |
+|  cw0/inst/clk_out1 | adsr/counter[31]_i_1_n_0           | rst_IBUF                                |               11 |             32 |         2.91 |
+|  cw0/inst/clk_out1 |                                    | rst_IBUF                                |               15 |             36 |         2.40 |
 +--------------------+------------------------------------+-----------------------------------------+------------------+----------------+--------------+
 
 

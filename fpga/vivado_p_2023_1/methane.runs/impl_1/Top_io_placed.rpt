@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date                      : Thu Aug 10 09:53:22 2023
+| Date                      : Mon Oct 16 19:58:03 2023
 | Host                      : DEDSEC3 running 64-bit major release  (build 9200)
 | Command                   : report_io -file Top_io_placed.rpt
 | Design                    : Top
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|             7 |
+|             8 |
 +---------------+
 
 
@@ -273,8 +273,8 @@ Table of Contents
 | M16        |             | High Range | VCCO_35                 | VCCO          |             |      35 |            |      |                     |                      |    1.80 |            |           |          |      |                  |              |                   |              |
 | M17        |             | High Range | IO_L8P_T1_AD10P_35      | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | M18        |             | High Range | IO_L8N_T1_AD10N_35      | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| M19        | midi_rxd    | High Range | IO_L7P_T1_AD2P_35       | INPUT         | LVCMOS18    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| M20        | rst         | High Range | IO_L7N_T1_AD2N_35       | INPUT         | LVCMOS18    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| M19        | rst         | High Range | IO_L7P_T1_AD2P_35       | INPUT         | LVCMOS18    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| M20        | btn_k2      | High Range | IO_L7N_T1_AD2N_35       | INPUT         | LVCMOS18    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | N1         |             |            | PS_DDR_CS_B_502         | PSS IO        |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | N2         |             |            | PS_DDR_A0_502           | PSS IO        |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | N3         |             |            | PS_DDR_CKE_502          | PSS IO        |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
@@ -433,7 +433,7 @@ Table of Contents
 | Y16        |             | High Range | IO_L7P_T1_34            | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y17        |             | High Range | IO_L7N_T1_34            | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y18        |             | High Range | IO_L17P_T2_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| Y19        |             | High Range | IO_L17N_T2_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| Y19        | midi_rxd    | High Range | IO_L17N_T2_34           | INPUT         | LVCMOS18    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | Y20        |             | High Range | VCCO_34                 | VCCO          |             |      34 |            |      |                     |                      |    1.80 |            |           |          |      |                  |              |                   |              |
 +------------+-------------+------------+-------------------------+---------------+-------------+---------+------------+------+---------------------+----------------------+---------+------------+-----------+----------+------+------------------+--------------+-------------------+--------------+
 * Default value

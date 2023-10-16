@@ -3,5 +3,5 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := lvgl-demo
+PROJECT_NAME := methane-esp32
 include $(IDF_PATH)/make/project.mk

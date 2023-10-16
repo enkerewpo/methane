@@ -1,6 +1,7 @@
 module Top(
     input           clk_in_50M,
-    input           rst,
+    input           rst, // PL KEY2 M19
+    input           btn_k2, // PL KEY1 M20
     input           midi_rxd,
     output          bclk,
     output          ws,
@@ -74,11 +75,14 @@ module Top(
         .d(d)
     );
 
+    logic uart_trigger = ~btn_k2;
+    logic [7:0] uart_data = 8'h41; // letter 'A'
+
     UART_tx uart_tx(
         .clock(clk_10M),
         .reset(rst),
-        .io_i_tx_trig(),
-        .io_i_data(),
+        .io_i_tx_trig(uart_trigger),
+        .io_i_data(uart_data),
         .io_o_tx_busy(),
         .io_o_tx_done(),
         .io_o_serial_data(txd)
