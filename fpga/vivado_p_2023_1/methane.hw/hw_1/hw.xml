@@ -8,6 +8,8 @@
   <device name="xc7z010_1" gui_info=""/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z010_1" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/Top.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>

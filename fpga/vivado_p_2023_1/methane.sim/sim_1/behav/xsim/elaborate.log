@@ -5,12 +5,46 @@ Running: E:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:31]
-WARNING: [VRFC 10-3091] actual bit length 33 differs from formal bit length 32 for port 'io_freq' [D:/Github/methane/fpga/src/Top.sv:33]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:43]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:52]
-WARNING: [VRFC 10-3091] actual bit length 33 differs from formal bit length 32 for port 'io_freq' [D:/Github/methane/fpga/src/Top.sv:53]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:61]
-WARNING: [VRFC 10-5021] port 'midi_rxd' is not connected on this instance [D:/Github/methane/fpga/src/sim/Top_tb.sv:17]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:35]
+WARNING: [VRFC 10-3091] actual bit length 33 differs from formal bit length 32 for port 'io_freq' [D:/Github/methane/fpga/src/Top.sv:37]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:47]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:56]
+WARNING: [VRFC 10-3091] actual bit length 33 differs from formal bit length 32 for port 'io_freq' [D:/Github/methane/fpga/src/Top.sv:57]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'io_en' [D:/Github/methane/fpga/src/Top.sv:65]
+WARNING: [VRFC 10-5021] port 'midi_rxd' is not connected on this instance [D:/Github/methane/fpga/src/sim/Top_tb.sv:20]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/Top.sv" Line 1. Module Top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/MidiProc.sv" Line 214. Module MidiProc doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/MidiProc.sv" Line 62. Module UART_rx doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/ADSR.sv" Line 53. Module ADSR doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/Oscillator.sv" Line 53. Module Oscillator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/VCA.sv" Line 2. Module VCA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/I2S.sv" Line 1. Module I2S doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/UART_tx.sv" Line 53. Module UART_tx doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/Top.sv" Line 1. Module Top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/MidiProc.sv" Line 214. Module MidiProc doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/MidiProc.sv" Line 62. Module UART_rx doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/ADSR.sv" Line 53. Module ADSR doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/Oscillator.sv" Line 53. Module Oscillator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/VCA.sv" Line 2. Module VCA doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/I2S.sv" Line 1. Module I2S doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/methane/fpga/src/chisel/output/UART_tx.sv" Line 53. Module UART_tx doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=17.5,...
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.UART_rx
+Compiling module xil_defaultlib.MidiProc
+Compiling module xil_defaultlib.ADSR
+Compiling module xil_defaultlib.Oscillator
+Compiling module xil_defaultlib.VCA
+Compiling module xil_defaultlib.I2S
+Compiling module xil_defaultlib.UART_tx
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav

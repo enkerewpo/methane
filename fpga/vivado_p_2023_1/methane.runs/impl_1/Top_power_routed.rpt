@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Mon Oct 16 19:58:23 2023
+| Date             : Tue Oct 17 15:31:10 2023
 | Host             : DEDSEC3 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1124 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      681 |     17600 |            3.87 |
+| Slice Logic    |    <0.001 |     1125 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      682 |     17600 |            3.88 |
 |   CARRY4       |    <0.001 |      168 |      4400 |            3.82 |
 |   Register     |    <0.001 |      196 |     35200 |            0.56 |
 |   Others       |     0.000 |       20 |       --- |             --- |
 |   F7/F8 Muxes  |     0.000 |        4 |     17600 |            0.02 |
-| Signals        |    <0.001 |     1055 |       --- |             --- |
+| Signals        |    <0.001 |     1054 |       --- |             --- |
 | Block RAM      |    <0.001 |        1 |        60 |            1.67 |
 | MMCM           |     0.113 |        1 |         2 |           50.00 |
 | DSPs           |    <0.001 |        4 |        80 |            5.00 |

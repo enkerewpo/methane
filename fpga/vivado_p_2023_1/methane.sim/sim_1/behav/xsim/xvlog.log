@@ -1,0 +1,21 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github/methane/fpga/src/chisel/output/ADSR.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADSR
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github/methane/fpga/src/I2S.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2S
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github/methane/fpga/src/chisel/output/MidiProc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UART_rx
+INFO: [VRFC 10-311] analyzing module MidiProc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github/methane/fpga/src/chisel/output/Oscillator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Oscillator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github/methane/fpga/src/Top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github/methane/fpga/src/chisel/output/UART_tx.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UART_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github/methane/fpga/src/chisel/output/VCA.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VCA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Github/methane/fpga/src/sim/Top_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb

@@ -11,25 +11,93 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.166666 us"></ZoomStartTime>
-      <ZoomEndTime time="61.166667 us"></ZoomEndTime>
-      <Cursor1Time time="51.000000 us"></Cursor1Time>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="14.760000001 ms"></ZoomEndTime>
+      <Cursor1Time time="2.843864285 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="223"></NameColumnWidth>
-      <ValueColumnWidth column_width="62"></ValueColumnWidth>
+      <NameColumnWidth column_width="215"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="/Top_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/btn_k2" type="logic">
+      <obj_property name="ElementShortName">btn_k2</obj_property>
+      <obj_property name="ObjectShortName">btn_k2</obj_property>
    </wvobject>
    <wvobject fp_name="/Top_tb/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/rst_1" type="logic">
+      <obj_property name="ElementShortName">rst_1</obj_property>
+      <obj_property name="ObjectShortName">rst_1</obj_property>
+   </wvobject>
    <wvobject fp_name="/Top_tb/out" type="array">
       <obj_property name="ElementShortName">out[15:0]</obj_property>
       <obj_property name="ObjectShortName">out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/io_i_tx_trig" type="logic">
+      <obj_property name="ElementShortName">io_i_tx_trig</obj_property>
+      <obj_property name="ObjectShortName">io_i_tx_trig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/io_i_data" type="array">
+      <obj_property name="ElementShortName">io_i_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">io_i_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/io_o_tx_busy" type="logic">
+      <obj_property name="ElementShortName">io_o_tx_busy</obj_property>
+      <obj_property name="ObjectShortName">io_o_tx_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/io_o_tx_done" type="logic">
+      <obj_property name="ElementShortName">io_o_tx_done</obj_property>
+      <obj_property name="ObjectShortName">io_o_tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/io_o_serial_data" type="logic">
+      <obj_property name="ElementShortName">io_o_serial_data</obj_property>
+      <obj_property name="ObjectShortName">io_o_serial_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/clkCnterReg" type="array">
+      <obj_property name="ElementShortName">clkCnterReg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">clkCnterReg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/bitCnterReg" type="array">
+      <obj_property name="ElementShortName">bitCnterReg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bitCnterReg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/inDataReg" type="array">
+      <obj_property name="ElementShortName">inDataReg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inDataReg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/outDataReg" type="logic">
+      <obj_property name="ElementShortName">outDataReg</obj_property>
+      <obj_property name="ObjectShortName">outDataReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/outTxBusyReg" type="logic">
+      <obj_property name="ElementShortName">outTxBusyReg</obj_property>
+      <obj_property name="ObjectShortName">outTxBusyReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/outTxDoneReg" type="logic">
+      <obj_property name="ElementShortName">outTxDoneReg</obj_property>
+      <obj_property name="ObjectShortName">outTxDoneReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/uart_tx/stateReg" type="array">
+      <obj_property name="ElementShortName">stateReg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">stateReg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/methane_top/txd" type="logic">
+      <obj_property name="ElementShortName">txd</obj_property>
+      <obj_property name="ObjectShortName">txd</obj_property>
    </wvobject>
 </wave_config>

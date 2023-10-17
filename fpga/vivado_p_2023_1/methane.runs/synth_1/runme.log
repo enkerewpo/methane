@@ -14,7 +14,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Top.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 436.508 ; gain = 164.219
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 438.031 ; gain = 166.652
 Command: read_checkpoint -auto_incremental -incremental D:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/utils_1/imports/synth_1/Top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/Github/methane/fpga/vivado_p_2023_1/methane.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,31 +27,31 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 33888
+INFO: [Synth 8-7075] Helper process launched with PID 11544
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1264.785 ; gain = 411.328
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1264.941 ; gain = 409.984
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top' [D:/Github/methane/fpga/src/Top.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1/.Xil/Vivado-7716-DEDSEC3/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1/.Xil/Vivado-7716-DEDSEC3/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1/.Xil/Vivado-32252-DEDSEC3/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1/.Xil/Vivado-32252-DEDSEC3/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'MidiProc' [D:/Github/methane/fpga/src/chisel/output/MidiProc.sv:214]
 INFO: [Synth 8-6157] synthesizing module 'UART_rx' [D:/Github/methane/fpga/src/chisel/output/MidiProc.sv:62]
 INFO: [Synth 8-6155] done synthesizing module 'UART_rx' (0#1) [D:/Github/methane/fpga/src/chisel/output/MidiProc.sv:62]
 INFO: [Synth 8-6155] done synthesizing module 'MidiProc' (0#1) [D:/Github/methane/fpga/src/chisel/output/MidiProc.sv:214]
-WARNING: [Synth 8-689] width (33) of port connection 'io_freq' does not match port width (32) of module 'MidiProc' [D:/Github/methane/fpga/src/Top.sv:34]
+WARNING: [Synth 8-689] width (33) of port connection 'io_freq' does not match port width (32) of module 'MidiProc' [D:/Github/methane/fpga/src/Top.sv:37]
 INFO: [Synth 8-6157] synthesizing module 'ADSR' [D:/Github/methane/fpga/src/chisel/output/ADSR.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'ADSR' (0#1) [D:/Github/methane/fpga/src/chisel/output/ADSR.sv:53]
-WARNING: [Synth 8-7071] port 'io_attack' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:41]
-WARNING: [Synth 8-7071] port 'io_decay' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:41]
-WARNING: [Synth 8-7071] port 'io_sustain' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:41]
-WARNING: [Synth 8-7071] port 'io_release' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:41]
-WARNING: [Synth 8-7071] port 'io_attack_curve_type' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:41]
-WARNING: [Synth 8-7071] port 'io_decay_curve_type' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:41]
-WARNING: [Synth 8-7071] port 'io_release_curve_type' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:41]
-WARNING: [Synth 8-7023] instance 'adsr' of module 'ADSR' has 13 connections declared, but only 6 given [D:/Github/methane/fpga/src/Top.sv:41]
+WARNING: [Synth 8-7071] port 'io_attack' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:44]
+WARNING: [Synth 8-7071] port 'io_decay' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:44]
+WARNING: [Synth 8-7071] port 'io_sustain' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:44]
+WARNING: [Synth 8-7071] port 'io_release' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:44]
+WARNING: [Synth 8-7071] port 'io_attack_curve_type' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:44]
+WARNING: [Synth 8-7071] port 'io_decay_curve_type' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:44]
+WARNING: [Synth 8-7071] port 'io_release_curve_type' of module 'ADSR' is unconnected for instance 'adsr' [D:/Github/methane/fpga/src/Top.sv:44]
+WARNING: [Synth 8-7023] instance 'adsr' of module 'ADSR' has 13 connections declared, but only 6 given [D:/Github/methane/fpga/src/Top.sv:44]
 INFO: [Synth 8-6157] synthesizing module 'Oscillator' [D:/Github/methane/fpga/src/chisel/output/Oscillator.sv:53]
 INFO: [Synth 8-6155] done synthesizing module 'Oscillator' (0#1) [D:/Github/methane/fpga/src/chisel/output/Oscillator.sv:53]
-WARNING: [Synth 8-689] width (33) of port connection 'io_freq' does not match port width (32) of module 'Oscillator' [D:/Github/methane/fpga/src/Top.sv:54]
+WARNING: [Synth 8-689] width (33) of port connection 'io_freq' does not match port width (32) of module 'Oscillator' [D:/Github/methane/fpga/src/Top.sv:57]
 INFO: [Synth 8-6157] synthesizing module 'VCA' [D:/Github/methane/fpga/src/chisel/output/VCA.sv:2]
 INFO: [Synth 8-6155] done synthesizing module 'VCA' (0#1) [D:/Github/methane/fpga/src/chisel/output/VCA.sv:2]
 INFO: [Synth 8-6157] synthesizing module 'I2S' [D:/Github/methane/fpga/src/I2S.sv:1]
@@ -80,18 +80,18 @@ WARNING: [Synth 8-7129] Port io_control[16] in module VCA is either unconnected 
 WARNING: [Synth 8-7129] Port io_en in module ADSR is either unconnected or has no load
 WARNING: [Synth 8-7129] Port io_en in module MidiProc is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1362.777 ; gain = 509.320
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1363.035 ; gain = 508.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1362.777 ; gain = 509.320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1363.035 ; gain = 508.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1362.777 ; gain = 509.320
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1363.035 ; gain = 508.078
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1362.777 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1363.035 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -104,22 +104,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1477.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1474.707 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1477.773 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1474.707 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -128,10 +128,10 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk_in_50M. (constraint file  d:/
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in_50M. (constraint file  d:/Github/methane/fpga/vivado_p_2023_1/methane.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
 Applied set_property KEEP_HIERARCHY = SOFT for cw0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -440,7 +440,7 @@ DSP Report: Generating DSP vca/io_out0, operation Mode is: A*B.
 DSP Report: operator vca/io_out0 is absorbed into DSP vca/io_out0.
 WARNING: [Synth 8-7129] Port io_en in module ADSR is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -530,13 +530,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -545,7 +545,7 @@ INFO: [Synth 8-7052] The timing for the instance midi_proc/note_reg (implemented
 INFO: [Synth 8-7052] The timing for the instance midi_proc/note_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance osc1/idx_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -563,37 +563,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -624,7 +624,7 @@ Report Cell Usage:
 |1     |clk_wiz  |     1|
 |2     |CARRY4   |   195|
 |3     |DSP48E1  |     4|
-|5     |LUT1     |    40|
+|5     |LUT1     |    41|
 |6     |LUT2     |    77|
 |7     |LUT3     |   475|
 |8     |LUT4     |    60|
@@ -639,26 +639,26 @@ Report Cell Usage:
 |18    |OBUF     |     4|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1474.707 ; gain = 619.750
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 1477.773 ; gain = 509.320
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:41 . Memory (MB): peak = 1477.773 ; gain = 624.316
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 1474.707 ; gain = 508.078
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1474.707 ; gain = 619.750
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1477.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1474.707 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 205 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1477.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1476.215 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 794a8fcc
+Synth Design complete | Checksum: 9f0a23a2
 INFO: [Common 17-83] Releasing license: Synthesis
 42 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:48 . Memory (MB): peak = 1477.773 ; gain = 1005.617
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 1476.215 ; gain = 1002.895
 INFO: [Common 17-1381] The checkpoint 'D:/Github/methane/fpga/vivado_p_2023_1/methane.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 16 19:57:16 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 17 15:30:09 2023...

@@ -11,11 +11,14 @@ module Top(
 
     logic clk_10M;
     logic clk_14M; // 14.1
+    logic rst_1;
+
+    assign rst_1 = ~rst;
 
     // Xilinx IP for clock generation
     clk_wiz_0 cw0(
         .clk_in1(clk_in_50M),
-        .reset(rst),
+        .reset(rst_1),
         .clk_out1(clk_10M),
         .clk_out2(clk_14M),
         .locked()
@@ -28,7 +31,7 @@ module Top(
 
     MidiProc midi_proc(
         .clock(clk_10M),
-        .reset(rst),
+        .reset(rst_1),
         .io_en(1),
         .io_midi_in(midi_rxd),
         .io_freq(freq),
@@ -40,7 +43,7 @@ module Top(
 
     ADSR adsr(
         .clock(clk_10M),
-        .reset(rst),
+        .reset(rst_1),
         .io_en(1),
         .io_note_on(note_on),
         .io_note_off(note_off),
@@ -49,7 +52,7 @@ module Top(
 
     Oscillator osc1(
         .clock(clk_10M),
-        .reset(rst),
+        .reset(rst_1),
         .io_en(1),
         .io_freq(freq), // A440
         .io_out(out1)
@@ -58,7 +61,7 @@ module Top(
     logic [15:0] out_after_vca;
     VCA vca(
         .clock(clk_10M),
-        .reset(rst),
+        .reset(rst_1),
         .io_en(1),
         .io_in(out1),
         .io_control(adsr_cv),
@@ -67,7 +70,7 @@ module Top(
 
     I2S i2s(
         .clk(clk_14M),
-        .rst(rst),
+        .rst(rst_1),
         .L(out_after_vca),
         .R(out_after_vca),
         .bclk(bclk),
@@ -75,12 +78,14 @@ module Top(
         .d(d)
     );
 
-    logic uart_trigger = ~btn_k2;
+    logic uart_trigger;
     logic [7:0] uart_data = 8'h41; // letter 'A'
+
+    assign uart_trigger = ~btn_k2;
 
     UART_tx uart_tx(
         .clock(clk_10M),
-        .reset(rst),
+        .reset(rst_1),
         .io_i_tx_trig(uart_trigger),
         .io_i_data(uart_data),
         .io_o_tx_busy(),
