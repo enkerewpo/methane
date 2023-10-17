@@ -15,7 +15,6 @@
 #include <string.h>
 
 #include "driver/gpio.h"
-#include "driver/uart.h"
 #include "esp_freertos_hooks.h"
 #include "esp_system.h"
 #include "freertos/FreeRTOS.h"
@@ -52,23 +51,19 @@
 /*********************
  *      DEFINES
  *********************/
-#define TAG "methane_esp32"
+#define TAG "demo"
 #define LV_TICK_PERIOD_MS 1
-#define UART_RXD (GPIO_NUM_9)
-#define UART_TXD (GPIO_NUM_10)
-#define UART_RTS (UART_PIN_NO_CHANGE)
-#define UART_CTS (UART_PIN_NO_CHANGE)
-#define UART_BAUDRATE 115200
-#define UART_PORT_NUM UART_NUM_1
 
 /**********************
  *  STATIC PROTOTYPES
  **********************/
 static void lv_tick_task(void *arg);
+
 static void guiTask(void *pvParameter);
+
 static void create_demo_application(void);
+
 static void show_welcome(void);
-static void uart_recv_task(void *arg);
 
 /**********************
  *   APPLICATION MAIN
@@ -80,8 +75,6 @@ void app_main() {
    * on. NOTE: When not using Wi-Fi nor Bluetooth you can pin the guiTask to
    * core 0 */
   xTaskCreatePinnedToCore(guiTask, "gui", 4096 * 2, NULL, 0, NULL, 1);
-  xTaskCreatePinnedToCore(uart_recv_task, "uart_recv", 4096 * 2, NULL, 0, NULL,
-                          1);
 }
 
 /* Creates a semaphore to handle concurrent call to lvgl stuff
@@ -256,141 +249,10 @@ static void show_welcome(void) {
   lv_label_set_text(label2, "wheatfox");
   lv_obj_set_pos(label2, 50, 90);
   lv_obj_add_style(label2, LV_OBJ_PART_MAIN, &style_text);
-
-  lv_obj_t *circle1 = lv_obj_create(screen, NULL);
-  lv_obj_set_size(circle1, 50, 50);
-  lv_obj_set_pos(circle1, 200, 120);
-  lv_obj_set_style_local_bg_color(circle1, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT,
-                                  LV_COLOR_TRANSP);
-  lv_obj_set_style_local_radius(circle1, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT,
-                                LV_RADIUS_CIRCLE);
-  lv_obj_add_style(circle1, LV_OBJ_PART_MAIN, &style_circle);
-
-  lv_obj_t *circle2 = lv_obj_create(screen, circle1);
-  lv_obj_set_size(circle2, 50, 50);
-  lv_obj_set_pos(circle2, 220, 120);
-  lv_obj_set_style_local_bg_color(circle2, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT,
-                                  LV_COLOR_TRANSP);
-  lv_obj_set_style_local_radius(circle2, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT,
-                                LV_RADIUS_CIRCLE);
-  lv_obj_add_style(circle2, LV_OBJ_PART_MAIN, &style_circle);
-
-  lv_obj_t *canvas = lv_canvas_create(screen, NULL);
-  lv_obj_set_size(canvas, 135, 20);
-  lv_obj_set_pos(canvas, 50, 140);
-  lv_canvas_set_buffer(canvas, lv_mem_alloc(135 * 20 * 2), 135, 20,
-                       LV_IMG_CF_TRUE_COLOR);
-  lv_canvas_fill_bg(canvas, LV_COLOR_BLACK, LV_OPA_COVER);
-
-  lv_coord_t x, y;
-
-  for (x = 0; x < 30; x++) {
-    y = 10 + (int)(10 * sin(x * 2 * M_PI / 30));
-    lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
-  }
-
-  for (x = 35; x < 65; x++) {
-    lv_coord_t x1 = x - 35;
-    if (x1 == 0) {
-      for (y = 10; y < 20; y++) {
-        lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
-      }
-    } else if (x1 < 15 && x1 > 0) {
-      y = 19;
-      lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
-    } else if (x1 == 15) {
-      for (y = 19; y >= 0; y--) {
-        lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
-      }
-    } else if (x1 > 15 && x1 < 29) {
-      y = 0;
-      lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
-    } else if (x1 == 29) {
-      for (y = 0; y < 10; y++) {
-        lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
-      }
-    }
-  }
-
-  for (x = 70; x < 100; x++) {
-    lv_coord_t x1 = x - 70;
-    if (x1 < 7) {
-      y = x1 + 10;
-    } else if (x1 < 21) {
-      y = 14 - x1 + 10;
-    } else {
-      y = -28 + x1 + 10;
-    }
-    lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
-  }
-
-  for (x = 105; x < 135; x++) {
-    lv_coord_t x1 = x - 105;
-    if (x1 == 0) {
-      for (y = 0; y < 20; y++) {
-        lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
-      }
-    } else if (x1 <= 29) {
-      y = 10 + (10 - (20. / 30) * x1);
-      lv_canvas_set_px(canvas, x, 19 - y, LV_COLOR_WHITE);
-    }
-  }
 }
 
 static void lv_tick_task(void *arg) {
   (void)arg;
+
   lv_tick_inc(LV_TICK_PERIOD_MS);
-}
-
-static void uart_recv_task(void *arg) {
-  /* Configure parameters of an UART driver,
-   * communication pins and install the driver */
-  uart_config_t uart_config = {
-      .baud_rate = UART_BAUDRATE,
-      .data_bits = UART_DATA_8_BITS,
-      .parity = UART_PARITY_DISABLE,
-      .stop_bits = UART_STOP_BITS_1,
-      .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
-      .source_clk = UART_SCLK_APB,
-  };
-  int intr_alloc_flags = 0;
-
-#if CONFIG_UART_ISR_IN_IRAM
-  intr_alloc_flags = ESP_INTR_FLAG_IRAM;
-#endif
-
-#define BUF_SIZE (1024)
-
-  ESP_ERROR_CHECK(uart_driver_install(UART_PORT_NUM, BUF_SIZE * 2, 0, 0, NULL,
-                                      intr_alloc_flags));
-  ESP_ERROR_CHECK(uart_param_config(UART_PORT_NUM, &uart_config));
-  ESP_ERROR_CHECK(
-      uart_set_pin(UART_PORT_NUM, UART_TXD, UART_RXD, UART_RTS, UART_CTS));
-
-  // Configure a temporary buffer for the incoming data
-  uint8_t *data = (uint8_t *)malloc(BUF_SIZE);
-
-  char *display_buffer = (char *)malloc(
-      2048); // display received char in buffer and draw on screen
-  int display_buffer_index = 0;
-
-  // set init data of display buffer to "WAITING FOR UART DATA"
-
-  while (1) {
-    // Read data from the UART
-    int len = uart_read_bytes(UART_PORT_NUM, data, (BUF_SIZE - 1),
-                              20 / portTICK_PERIOD_MS);
-    display_buffer_index += len;
-    if (len > 0) {
-      data[len] = 0;
-      for (int i = 0; i < len; i++) {
-        display_buffer[display_buffer_index - len + i] = data[i];
-      }
-      display_buffer[display_buffer_index] = 0;
-      lv_obj_t *screen = lv_disp_get_scr_act(NULL);
-      lv_obj_t *label = lv_label_create(screen, NULL);
-      lv_label_set_text(label, display_buffer);
-      lv_obj_set_pos(label, 50, 200);
-    }
-  }
 }
