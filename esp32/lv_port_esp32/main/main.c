@@ -15,7 +15,9 @@
 #include <string.h>
 
 #include "driver/gpio.h"
+#include "driver/uart.h"
 #include "esp_freertos_hooks.h"
+#include "esp_log.h"
 #include "esp_system.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
@@ -51,18 +53,15 @@
 /*********************
  *      DEFINES
  *********************/
-#define TAG "demo"
+#define TAG "methane-esp32"
 #define LV_TICK_PERIOD_MS 1
 
 /**********************
  *  STATIC PROTOTYPES
  **********************/
 static void lv_tick_task(void *arg);
-
-static void guiTask(void *pvParameter);
-
-static void create_demo_application(void);
-
+static void gui_task(void *pvParameter);
+static void uart_handle(void *pvParameter);
 static void show_welcome(void);
 
 /**********************
@@ -72,9 +71,10 @@ void app_main() {
 
   /* If you want to use a task to create the graphic, you NEED to create a
    * Pinned task Otherwise there can be problem such as memory corruption and so
-   * on. NOTE: When not using Wi-Fi nor Bluetooth you can pin the guiTask to
+   * on. NOTE: When not using Wi-Fi nor Bluetooth you can pin the gui_task to
    * core 0 */
-  xTaskCreatePinnedToCore(guiTask, "gui", 4096 * 2, NULL, 0, NULL, 1);
+  xTaskCreatePinnedToCore(gui_task, "gui", 4096 * 2, NULL, 0, NULL, 1);
+  xTaskCreate(uart_handle, "uart_handle", 4096 * 2, NULL, 0, NULL);
 }
 
 /* Creates a semaphore to handle concurrent call to lvgl stuff
@@ -82,7 +82,7 @@ void app_main() {
  * you should lock on the very same semaphore! */
 SemaphoreHandle_t xGuiSemaphore;
 
-static void guiTask(void *pvParameter) {
+static void gui_task(void *pvParameter) {
 
   (void)pvParameter;
   xGuiSemaphore = xSemaphoreCreateMutex();
@@ -180,60 +180,26 @@ static void guiTask(void *pvParameter) {
   vTaskDelete(NULL);
 }
 
-static void create_demo_application(void) {
-  /* When using a monochrome display we only show "Hello World" centered on the
-   * screen */
-#if defined CONFIG_LV_TFT_DISPLAY_MONOCHROME ||                                \
-    defined CONFIG_LV_TFT_DISPLAY_CONTROLLER_ST7735S
-
-  /* use a pretty small demo for monochrome displays */
-  /* Get the current screen  */
-  lv_obj_t *scr = lv_disp_get_scr_act(NULL);
-
-  /*Create a Label on the currently active screen*/
-  lv_obj_t *label1 = lv_label_create(scr, NULL);
-
-  /*Modify the Label's text*/
-  lv_label_set_text(label1, "Hello\nworld");
-
-  /* Align the Label to the center
-   * NULL means align on parent (which is the screen now)
-   * 0, 0 at the end means an x, y offset after alignment*/
-  lv_obj_align(label1, NULL, LV_ALIGN_CENTER, 0, 0);
-#else
-  /* Otherwise we show the selected demo */
-
-#if defined CONFIG_LV_USE_DEMO_WIDGETS
-  lv_demo_widgets();
-#elif defined CONFIG_LV_USE_DEMO_KEYPAD_AND_ENCODER
-  lv_demo_keypad_encoder();
-#elif defined CONFIG_LV_USE_DEMO_BENCHMARK
-  lv_demo_benchmark();
-#elif defined CONFIG_LV_USE_DEMO_STRESS
-  lv_demo_stress();
-#else
-#error "No demo application selected."
-#endif
-#endif
-}
+lv_obj_t *screen;
+lv_style_t style_screen;
+lv_style_t style_text;
 
 static void show_welcome(void) {
 
-  lv_obj_t *screen = lv_disp_get_scr_act(NULL);
+  screen = lv_disp_get_scr_act(NULL);
 
-  static lv_style_t style_screen;
   lv_style_init(&style_screen);
   lv_style_set_bg_color(&style_screen, LV_STATE_DEFAULT, LV_COLOR_BLACK);
   lv_obj_add_style(lv_scr_act(), LV_OBJ_PART_MAIN, &style_screen);
 
-  static lv_style_t style_text;
   lv_style_init(&style_text);
   lv_style_set_text_color(&style_text, LV_STATE_DEFAULT, LV_COLOR_WHITE);
 
-  static lv_style_t style_circle;
-  lv_style_init(&style_circle);
-  lv_style_set_border_color(&style_circle, LV_STATE_DEFAULT, LV_COLOR_WHITE);
-  lv_style_set_bg_opa(&style_circle, LV_STATE_DEFAULT, LV_OPA_TRANSP);
+  //  static lv_style_t style_circle;
+  //  lv_style_init(&style_circle);
+  //  lv_style_set_border_color(&style_circle, LV_STATE_DEFAULT,
+  //  LV_COLOR_WHITE); lv_style_set_bg_opa(&style_circle, LV_STATE_DEFAULT,
+  //  LV_OPA_TRANSP);
 
   lv_obj_t *label1 = lv_label_create(screen, NULL);
   lv_label_set_text(label1, "METHANE SYNTH");
@@ -251,8 +217,62 @@ static void show_welcome(void) {
   lv_obj_add_style(label2, LV_OBJ_PART_MAIN, &style_text);
 }
 
+char uart_msgbuf[1024];
+int uart_msgbuf_len = 0;
+#define UART_TXD (GPIO_NUM_10)
+#define UART_RXD (GPIO_NUM_9)
+#define UART_RTS (UART_PIN_NO_CHANGE)
+#define UART_CTS (UART_PIN_NO_CHANGE)
+#define BUF_SIZE (1024)
+#define RD_BUF_SIZE (BUF_SIZE)
+#define UART_NUM UART_NUM_1
+#define UART_BAUD_RATE 115200
+
+static void uart_handle(void *pvParameter) {
+  // create uart driver
+  uart_config_t uart_config = {
+      .baud_rate = UART_BAUD_RATE,
+      .data_bits = UART_DATA_8_BITS,
+      .parity = UART_PARITY_DISABLE,
+      .stop_bits = UART_STOP_BITS_1,
+      .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+      .source_clk = UART_SCLK_APB,
+  };
+  ESP_ERROR_CHECK(uart_driver_install(UART_NUM, BUF_SIZE * 2, 0, 0, NULL, 0));
+  ESP_ERROR_CHECK(uart_param_config(UART_NUM, &uart_config));
+  ESP_ERROR_CHECK(
+      uart_set_pin(UART_NUM, UART_TXD, UART_RXD, UART_RTS, UART_CTS));
+  uint8_t *data = (uint8_t *)malloc(BUF_SIZE);
+
+  memcpy(uart_msgbuf, "UART_IDLE", 10);
+  uart_msgbuf_len = 10;
+
+  while (1) {
+    vTaskDelay(1000 / portTICK_RATE_MS);
+    // read data from uart
+    int len = uart_read_bytes(UART_NUM, data, BUF_SIZE, 20 / portTICK_RATE_MS);
+    if (len > 0) {
+      ESP_LOGI(TAG, "uart read : %d", len);
+      for (int i = 0; i < len; i++) {
+        uart_msgbuf[uart_msgbuf_len++] = data[i];
+      }
+    }
+    // try to take the semaphore, call lvgl related function on success
+    if (pdTRUE == xSemaphoreTake(xGuiSemaphore, portMAX_DELAY)) {
+      ESP_LOGI(TAG, "uart_handle_gui_draw");
+      // flush the screen
+      lv_obj_clean(screen);
+      // draw the text
+      lv_obj_t *label = lv_label_create(screen, NULL);
+      lv_label_set_text(label, uart_msgbuf);
+      lv_obj_set_pos(label, 50, 110);
+      lv_obj_add_style(label, LV_OBJ_PART_MAIN, &style_text);
+      xSemaphoreGive(xGuiSemaphore);
+    }
+  }
+}
+
 static void lv_tick_task(void *arg) {
   (void)arg;
-
   lv_tick_inc(LV_TICK_PERIOD_MS);
 }
